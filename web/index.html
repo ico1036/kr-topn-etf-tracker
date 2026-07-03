@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>압축 ETF 리밸런싱 트래커</title>
+<style>
+  :root {
+    --paper: #faf8f3;
+    --ink: #1c1a17;
+    --muted: #6b6459;
+    --line: #e6e0d5;
+    --card: #ffffff;
+    --teal: #0f6e6a;
+    --teal-soft: #e3f0ef;
+    --gold: #b8894b;
+    --gold-soft: #f6ecdd;
+    --hi: #1a7f5a;
+    --hi-bg: #e4f3ec;
+    --med: #b7791f;
+    --med-bg: #fbf0da;
+    --lo: #b23b3b;
+    --lo-bg: #f8e4e2;
+    --shadow: 0 1px 2px rgba(28,26,23,.04), 0 4px 16px rgba(28,26,23,.05);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Segoe UI", Roboto, sans-serif;
+    font-size: 14px; line-height: 1.5;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 20px 80px; }
+
+  header.top { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 4px; }
+  header.top h1 { font-size: 20px; margin: 0; letter-spacing: -.3px; }
+  header.top h1 .dot { color: var(--gold); }
+  header.top .meta { font-size: 12px; color: var(--muted); }
+
+  /* KPI row */
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0 8px; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; box-shadow: var(--shadow); }
+  .kpi .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+  .kpi .val { font-size: 24px; font-weight: 700; margin-top: 4px; }
+  .kpi .sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .bar { height: 6px; border-radius: 4px; background: var(--line); overflow: hidden; margin-top: 8px; display: flex; }
+  .bar > span { height: 100%; display: block; }
+  .bar .s-hi { background: var(--hi); }
+  .bar .s-med { background: var(--med); }
+  .bar .s-lo { background: var(--lo); }
+
+  /* tabs */
+  nav.tabs { display: flex; gap: 4px; margin: 22px 0 16px; border-bottom: 1px solid var(--line); }
+  nav.tabs button { background: none; border: none; padding: 9px 14px; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  nav.tabs button.active { color: var(--teal); border-bottom-color: var(--teal); }
+
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; }
+  .toolbar input, .toolbar select { font: inherit; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); }
+  .toolbar input { flex: 1; min-width: 180px; }
+  .toolbar .spacer { flex: 1; }
+
+  /* badges */
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .b-hi { color: var(--hi); background: var(--hi-bg); }
+  .b-med { color: var(--med); background: var(--med-bg); }
+  .b-lo { color: var(--lo); background: var(--lo-bg); }
+  .tier { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 4px; background: var(--gold-soft); color: var(--gold); }
+  .dday { font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background: var(--teal-soft); color: var(--teal); }
+  .dday.soon { background: var(--lo-bg); color: var(--lo); }
+  .theme-tag { font-size: 11px; color: var(--muted); background: var(--paper); border: 1px solid var(--line); padding: 1px 7px; border-radius: 999px; }
+
+  /* calendar cards */
+  .cal-list { display: flex; flex-direction: column; gap: 10px; }
+  .cal-card { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 10px; padding: 14px 16px; box-shadow: var(--shadow); display: grid; grid-template-columns: 92px 1fr auto; gap: 14px; align-items: center; cursor: pointer; transition: border-color .12s; }
+  .cal-card:hover { border-color: var(--teal); }
+  .cal-card.soon { border-left-color: var(--lo); }
+  .cal-card .date { text-align: center; }
+  .cal-card .date .m { font-size: 11px; color: var(--muted); text-transform: uppercase; }
+  .cal-card .date .d { font-size: 22px; font-weight: 800; line-height: 1; }
+  .cal-card .date .y { font-size: 11px; color: var(--muted); }
+  .cal-card .info .name { font-weight: 700; font-size: 15px; }
+  .cal-card .info .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .cal-card .right { text-align: right; display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+
+  /* table */
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
+  thead th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); padding: 11px 12px; border-bottom: 1px solid var(--line); background: #fcfbf8; cursor: pointer; user-select: none; white-space: nowrap; }
+  tbody td { padding: 11px 12px; border-bottom: 1px solid var(--line); font-size: 13px; vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: #fcfaf5; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .issuer { color: var(--muted); font-size: 12px; }
+
+  .empty { color: var(--muted); font-style: italic; }
+
+  /* detail drawer */
+  .drawer-bg { position: fixed; inset: 0; background: rgba(28,26,23,.28); opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 40; }
+  .drawer-bg.open { opacity: 1; pointer-events: auto; }
+  .drawer { position: fixed; top: 0; right: 0; height: 100%; width: min(520px, 92vw); background: var(--paper); box-shadow: -8px 0 30px rgba(28,26,23,.15); transform: translateX(100%); transition: transform .2s; z-index: 50; overflow-y: auto; }
+  .drawer.open { transform: none; }
+  .drawer .dhead { padding: 20px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--paper); }
+  .drawer .dhead h2 { margin: 0 0 6px; font-size: 18px; }
+  .drawer .dhead .close { position: absolute; top: 16px; right: 18px; border: none; background: none; font-size: 22px; cursor: pointer; color: var(--muted); }
+  .drawer .body { padding: 20px; }
+  .section-t { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--gold); font-weight: 700; margin: 20px 0 8px; }
+  .section-t:first-child { margin-top: 0; }
+  .kv { display: grid; grid-template-columns: 96px 1fr; gap: 4px 12px; font-size: 13px; }
+  .kv dt { color: var(--muted); }
+  .kv dd { margin: 0; }
+  .src-item { font-size: 12px; padding: 6px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 8px; align-items: center; }
+  .src-item a { color: var(--teal); text-decoration: none; word-break: break-all; }
+  .inv { font-size: 12px; padding: 3px 0; }
+  .inv.pass::before { content: "✓ "; color: var(--hi); font-weight: 800; }
+  .inv.fail::before { content: "✕ "; color: var(--lo); font-weight: 800; }
+  .mini-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .mini-table th, .mini-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  .mini-table td.num { text-align: right; }
+  .foot { margin-top: 40px; font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; line-height: 1.7; }
+  @media (max-width: 640px) {
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    .cal-card { grid-template-columns: 64px 1fr; }
+    .cal-card .right { grid-column: 2; flex-direction: row; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>압축 ETF 리밸런싱 트래커<span class="dot">.</span></h1>
+    <div class="meta" id="genMeta">데이터 로딩 중…</div>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <nav class="tabs">
+    <button data-tab="calendar" class="active">리밸 캘린더</button>
+    <button data-tab="all">ETF 전체</button>
+  </nav>
+
+  <div class="toolbar">
+    <input id="search" placeholder="ETF명 · 기초지수 · 테마 검색…" />
+    <select id="themeFilter"><option value="">전체 테마</option></select>
+    <select id="confFilter">
+      <option value="">전체 신뢰도</option>
+      <option value="High">High</option>
+      <option value="Med">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+  </div>
+
+  <div id="view"></div>
+
+  <div class="foot">
+    데이터는 <b>data/universe.json</b>에서 로드됩니다 · 각 값은 출처(source tier T0~T3)와 confidence(High/Med/Low)로 검증 · 이 페이지는 정보 제공용이며 투자자문이 아닙니다.
+  </div>
+</div>
+
+<div class="drawer-bg" id="drawerBg"></div>
+<aside class="drawer" id="drawer">
+  <div class="dhead">
+    <button class="close" id="drawerClose">×</button>
+    <h2 id="dTitle"></h2>
+    <div id="dSubtitle"></div>
+  </div>
+  <div class="body" id="dBody"></div>
+</aside>
+
+<script>
+const state = { data: null, tab: "calendar", q: "", theme: "", conf: "" };
+const $ = (s) => document.querySelector(s);
+const confClass = (c) => c === "High" ? "b-hi" : c === "Med" ? "b-med" : "b-lo";
+const confLabel = (c) => c === "High" ? "High" : c === "Med" ? "Medium" : "Low";
+const fmtEok = (v) => v == null ? "—" : (v >= 10000 ? (v/10000).toFixed(1) + "조" : v.toLocaleString() + "억");
+
+function daysUntil(dateStr) {
+  if (!dateStr) return null;
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = new Date(dateStr + "T00:00:00");
+  return Math.round((d - today) / 86400000);
+}
+
+async function load() {
+  try {
+    const res = await fetch("../data/universe.json?_=" + Date.now());
+    state.data = await res.json();
+  } catch (e) {
+    $("#view").innerHTML = '<p class="empty">data/universe.json 로드 실패 — 정적 서버로 열어야 합니다.</p>';
+    return;
+  }
+  const d = state.data;
+  $("#genMeta").textContent = "생성 " + (d.generated_at || "").slice(0,10) + " · ETF " + d.etfs.length + "종";
+  // theme filter options
+  const themes = [...new Set(d.etfs.map(e => e.theme).filter(Boolean))].sort();
+  $("#themeFilter").insertAdjacentHTML("beforeend", themes.map(t => `<option value="${t}">${t}</option>`).join(""));
+  renderKpis();
+  render();
+}
+
+function renderKpis() {
+  const e = state.data.etfs;
+  const n = e.length;
+  const hi = e.filter(x => x.confidence === "High").length;
+  const med = e.filter(x => x.confidence === "Med").length;
+  const lo = n - hi - med;
+  const withCons = e.filter(x => x.constituents && x.constituents.length).length;
+  const withSched = e.filter(x => x.rebalance && x.rebalance.next_date_est).length;
+  // rubric score: weighted completeness
+  const score = Math.round(((hi*1 + med*0.5) / Math.max(n,1)) * 100);
+  $("#kpis").innerHTML = `
+    <div class="kpi"><div class="label">유니버스</div><div class="val">${n}</div><div class="sub">종목 수집됨</div></div>
+    <div class="kpi"><div class="label">리밸 일정 확보</div><div class="val">${withSched}<span style="font-size:14px;color:var(--muted)">/${n}</span></div><div class="sub">구성종목 ${withCons}/${n}종</div></div>
+    <div class="kpi"><div class="label">데이터 신뢰도</div><div class="val">${score}<span style="font-size:14px;color:var(--muted)">/100</span></div>
+      <div class="bar"><span class="s-hi" style="width:${hi/n*100}%"></span><span class="s-med" style="width:${med/n*100}%"></span><span class="s-lo" style="width:${lo/n*100}%"></span></div>
+      <div class="sub">H ${hi} · M ${med} · L ${lo}</div></div>
+    <div class="kpi"><div class="label">임박 리밸 (30일)</div><div class="val">${e.filter(x=>{const dd=daysUntil(x.rebalance&&x.rebalance.next_date_est);return dd!=null&&dd>=0&&dd<=30;}).length}</div><div class="sub">D-30 이내</div></div>`;
+}
+
+function filtered() {
+  const q = state.q.toLowerCase();
+  return state.data.etfs.filter(e => {
+    if (state.theme && e.theme !== state.theme) return false;
+    if (state.conf && e.confidence !== state.conf) return false;
+    if (q && !(`${e.name} ${e.underlying_index||""} ${e.theme||""} ${e.issuer||""}`.toLowerCase().includes(q))) return false;
+    return true;
+  });
+}
+
+function render() {
+  if (state.tab === "calendar") renderCalendar();
+  else renderAll();
+}
+
+function renderCalendar() {
+  const rows = filtered()
+    .map(e => ({ e, dd: daysUntil(e.rebalance && e.rebalance.next_date_est) }))
+    .sort((a, b) => {
+      if (a.dd == null) return 1; if (b.dd == null) return -1; return a.dd - b.dd;
+    });
+  const withDate = rows.filter(r => r.dd != null);
+  const noDate = rows.filter(r => r.dd == null);
+  const card = ({ e, dd }) => {
+    const soon = dd != null && dd >= 0 && dd <= 30;
+    const dstr = e.rebalance.next_date_est;
+    const dObj = dstr ? new Date(dstr + "T00:00:00") : null;
+    const M = dObj ? dObj.toLocaleString("en", { month: "short" }) : "—";
+    const D = dObj ? dObj.getDate() : "??";
+    const Y = dObj ? dObj.getFullYear() : "";
+    return `<div class="cal-card ${soon?'soon':''}" data-id="${e.id}">
+      <div class="date"><div class="m">${M}</div><div class="d">${D}</div><div class="y">${Y}</div></div>
+      <div class="info"><div class="name">${e.name}</div>
+        <div class="sub">${e.underlying_index || '<span class="empty">기초지수 미확보</span>'} · ${e.rebalance.frequency_label}</div></div>
+      <div class="right">
+        <span class="dday ${soon?'soon':''}">${dd>=0?'D-'+dd:'지남'}</span>
+        <span class="badge ${confClass(e.confidence)}">${confLabel(e.confidence)}</span>
+      </div>
+    </div>`;
+  };
+  let html = "";
+  if (withDate.length) html += `<div class="cal-list">${withDate.map(card).join("")}</div>`;
+  if (noDate.length) {
+    html += `<div class="section-t" style="margin-top:24px">일정 미확보 (수집 대기)</div>`;
+    html += `<div class="cal-list">${noDate.map(({e})=>`<div class="cal-card" data-id="${e.id}" style="border-left-color:var(--line)">
+      <div class="date"><div class="m">—</div><div class="d">?</div></div>
+      <div class="info"><div class="name">${e.name}</div><div class="sub">${e.issuer||''} · ${e.theme||''}</div></div>
+      <div class="right"><span class="badge ${confClass(e.confidence)}">${confLabel(e.confidence)}</span></div></div>`).join("")}</div>`;
+  }
+  $("#view").innerHTML = html || '<p class="empty">조건에 맞는 ETF가 없습니다.</p>';
+  bindRows();
+}
+
+let sortKey = "aum_krw_eok", sortDir = -1;
+function renderAll() {
+  const cols = [
+    ["name","ETF"], ["issuer","운용사"], ["theme","테마"], ["underlying_index","기초지수"],
+    ["constituent_count","종목수"], ["aum_krw_eok","순자산"], ["rebalance","다음 리밸"], ["confidence","신뢰도"]
+  ];
+  const list = filtered().slice().sort((a,b) => {
+    let av, bv;
+    if (sortKey === "rebalance") { av = daysUntil(a.rebalance.next_date_est) ?? 1e9; bv = daysUntil(b.rebalance.next_date_est) ?? 1e9; }
+    else { av = a[sortKey]; bv = b[sortKey]; }
+    if (av == null) return 1; if (bv == null) return -1;
+    if (typeof av === "string") return sortDir * av.localeCompare(bv);
+    return sortDir * (av - bv);
+  });
+  const th = cols.map(([k,l]) => `<th data-k="${k}">${l}${sortKey===k?(sortDir<0?" ▾":" ▴"):""}</th>`).join("");
+  const body = list.map(e => {
+    const dd = daysUntil(e.rebalance.next_date_est);
+    return `<tr data-id="${e.id}">
+      <td><b>${e.name}</b></td>
+      <td class="issuer">${e.issuer||"—"}</td>
+      <td>${e.theme?`<span class="theme-tag">${e.theme}</span>`:"—"}</td>
+      <td>${e.underlying_index||'<span class="empty">—</span>'}</td>
+      <td class="num">${e.constituent_count??"—"}</td>
+      <td class="num">${fmtEok(e.aum_krw_eok)}</td>
+      <td>${e.rebalance.next_date_est?`${e.rebalance.next_date_est} <span class="dday ${dd<=30?'soon':''}">D-${dd}</span>`:'<span class="empty">미확보</span>'}</td>
+      <td><span class="badge ${confClass(e.confidence)}">${confLabel(e.confidence)}</span></td>
+    </tr>`;
+  }).join("");
+  $("#view").innerHTML = `<table><thead><tr>${th}</tr></thead><tbody>${body||`<tr><td colspan="8" class="empty">결과 없음</td></tr>`}</tbody></table>`;
+  $("#view").querySelectorAll("thead th").forEach(h => h.onclick = () => {
+    const k = h.dataset.k; if (k === sortKey) sortDir *= -1; else { sortKey = k; sortDir = -1; } renderAll();
+  });
+  bindRows();
+}
+
+function bindRows() {
+  $("#view").querySelectorAll("[data-id]").forEach(el => el.onclick = () => openDrawer(el.dataset.id));
+}
+
+function openDrawer(id) {
+  const e = state.data.etfs.find(x => x.id === id); if (!e) return;
+  $("#dTitle").innerHTML = `${e.name} <span class="badge ${confClass(e.confidence)}">${confLabel(e.confidence)}</span>`;
+  $("#dSubtitle").innerHTML = `<span class="issuer">${e.issuer||""} · ${e.ticker||"티커 미확보"} · ${e.theme||""}</span>`;
+  const r = e.rebalance;
+  const dq = e.data_quality || { invariants_passed: [], invariants_failed: [] };
+  const cons = e.constituents || [];
+  $("#dBody").innerHTML = `
+    <div class="section-t">기본 정보</div>
+    <dl class="kv">
+      <dt>기초지수</dt><dd>${e.underlying_index||'<span class="empty">미확보</span>'}</dd>
+      <dt>산출기관</dt><dd>${e.index_provider||"—"}</dd>
+      <dt>구성종목수</dt><dd>${e.constituent_count??"—"}</dd>
+      <dt>순자산</dt><dd>${fmtEok(e.aum_krw_eok)} ${e.aum_asof?`<span class="issuer">(${e.aum_asof})</span>`:""}</dd>
+    </dl>
+
+    <div class="section-t">리밸런싱</div>
+    <dl class="kv">
+      <dt>주기</dt><dd>${r.frequency_label||"—"}</dd>
+      <dt>다음 예정</dt><dd>${r.next_date_est||'<span class="empty">미확보</span>'} ${r.next_date_est?`<span class="badge ${confClass(r.next_date_confidence)}">${confLabel(r.next_date_confidence)}</span>`:""}</dd>
+      <dt>규칙</dt><dd>${r.rule||'<span class="empty">미확보</span>'}</dd>
+    </dl>
+
+    <div class="section-t">구성종목 ${cons.length?`(${cons.length})`:""}</div>
+    ${cons.length ? `<table class="mini-table"><thead><tr><th>#</th><th>종목</th><th>코드</th><th class="num">비중</th></tr></thead><tbody>
+      ${cons.map((c,i)=>`<tr><td>${c.rank??i+1}</td><td>${c.name}</td><td>${c.code||""}</td><td class="num">${c.weight!=null?c.weight+"%":"—"}</td></tr>`).join("")}
+    </tbody></table>` : '<p class="empty">구성종목 수집 대기 — Round 2에서 KRX PDF/운용사 XHR로 수집 예정.</p>'}
+
+    <div class="section-t">데이터 품질 (루브릭)</div>
+    ${dq.invariants_passed.map(x=>`<div class="inv pass">${x}</div>`).join("")}
+    ${dq.invariants_failed.map(x=>`<div class="inv fail">${x}</div>`).join("")}
+    <div class="issuer" style="margin-top:6px">교차검증 소스: ${dq.corroborating_sources??0}개</div>
+
+    <div class="section-t">출처</div>
+    ${(e.sources||[]).map(s=>`<div class="src-item"><span class="tier">${s.tier}</span><span>${s.field}</span><a href="${s.url}" target="_blank" rel="noopener">↗</a></div>`).join("") || '<span class="empty">출처 없음</span>'}
+  `;
+  $("#drawer").classList.add("open"); $("#drawerBg").classList.add("open");
+}
+function closeDrawer() { $("#drawer").classList.remove("open"); $("#drawerBg").classList.remove("open"); }
+
+document.querySelectorAll("nav.tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav.tabs button").forEach(x => x.classList.remove("active"));
+  b.classList.add("active"); state.tab = b.dataset.tab; render();
+});
+$("#search").oninput = (e) => { state.q = e.target.value; render(); };
+$("#themeFilter").onchange = (e) => { state.theme = e.target.value; render(); };
+$("#confFilter").onchange = (e) => { state.conf = e.target.value; render(); };
+$("#drawerClose").onclick = closeDrawer; $("#drawerBg").onclick = closeDrawer;
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeDrawer(); });
+
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# scratch
+scratch/
+*.tmp
