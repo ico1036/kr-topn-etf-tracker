@@ -45,18 +45,32 @@ python3 -m http.server 8787
 
 핵심 철학: **값과 검증은 별개 상태다** — invariant를 통과해야 믿는다. 정량은 T0/T1+2소스, Low는 버리지 않고 격리해 재수집 큐로.
 
-## 수집 현황 (2026-07-03 기준)
+## 수집 현황 (2026-07-05 기준)
 
 | 레이어 | 상태 |
 |---|---|
 | 유니버스 | 34종 (5대 운용사 + 한화PLUS·NH, 13개 테마) |
-| 리밸 일정 | 2/34 (Round 2 진행 예정) |
-| 구성종목 | 0/34 (Round 2: KRX 일일 PDF / 운용사 XHR) |
-| 데이터 신뢰도 | 38/100 |
+| 리밸 일정 | 31/34 — 지수 방법론 원문(T0) 기반, 액티브 3종은 정기변경 비적용 |
+| 구성종목 | 28/34 — 운용사 공식 PDF API(T0) 위주. 나머지 6은 파생승계 4·합성 1·미상장 1 |
+| 데이터 신뢰도 | **95/100** (High 30 · Med 3 · Low 0, 미상장 1종 분모 제외) |
+
+잔여 Med 3종은 원출처가 현재 비공개인 항목(KODEX 방산TOP10 시행일 원문, Solactive China selection day) — 수집 가능한 공개 정보 기준 커버리지 100%. 해소 경로는 `rubric_scoreboard.remaining_med`에 기록.
+
+### 확보된 T0 수집 경로 (자동화용)
+
+- KODEX: `samsungfund.com/api/v1/kodex/product-pdf/{fId}.do?gijunYMD=YYYY.MM.DD`
+- SOL: `soletf.com/api/etf/pds/pdf/{fundNo}`
+- ACE: `papi.aceetf.co.kr/api/funds/{fundCd}/pdf/down`
+- PLUS: `plusetf.co.kr/api/v1/product/pdf/list?n={n}`
+- RISE: 상품페이지 서버렌더 표 + 네이버 `m.stock.naver.com/api/stock/{ticker}/etfAnalysis`
+- FnGuide 방법론: `file.fnguide.com/fnindex/files/*.pdf` / Akros: `akrostec.com/indices/{code}` / Solactive: `solactive.com/downloads/Guideline-*.pdf`
 
 ## 로드맵
 
 - [x] Round 1 — 유니버스 수집 (테마별 병렬 크롤)
-- [ ] Round 2 — 리밸 일정(지수 방법론 파싱) + 구성종목(KRX PDF/XHR)
-- [ ] 리밸일 정밀 계산 (선물옵션 만기일 기반)
+- [x] Round 2 — 리밸 일정(지수 방법론 T0 파싱) + 구성종목(운용사 PDF API)
+- [x] Round 3 — 갭 해소(AUM·상충 판정) + 루브릭 재채점
+- [ ] 상장 후속: ACE K방산TOP5+ 티커·구성종목 (2026-07-07 상장)
+- [ ] 12월 KIND 공시로 KODEX 방산TOP10 시행일 상충 해소
+- [ ] 일일 자동 수집기 (위 T0 API 경로 활용)
 - [ ] (v2) 리밸 예측기 — 편입/편출 예측 + 임팩트 스코어(거래대금 대비)

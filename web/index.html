@@ -204,8 +204,9 @@ function renderKpis() {
   const lo = n - hi - med;
   const withCons = e.filter(x => x.constituents && x.constituents.length).length;
   const withSched = e.filter(x => x.rebalance && x.rebalance.next_date_est).length;
-  // rubric score: weighted completeness
-  const score = Math.round(((hi*1 + med*0.5) / Math.max(n,1)) * 100);
+  // rubric score: 공식 채점(rubric_scoreboard) 우선, 없으면 가중 완전성으로 추정
+  const sb = state.data.rubric_scoreboard;
+  const score = sb && sb.score != null ? sb.score : Math.round(((hi*1 + med*0.5) / Math.max(n,1)) * 100);
   $("#kpis").innerHTML = `
     <div class="kpi"><div class="label">유니버스</div><div class="val">${n}</div><div class="sub">종목 수집됨</div></div>
     <div class="kpi"><div class="label">리밸 일정 확보</div><div class="val">${withSched}<span style="font-size:14px;color:var(--muted)">/${n}</span></div><div class="sub">구성종목 ${withCons}/${n}종</div></div>

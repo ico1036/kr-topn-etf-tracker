@@ -1,210 +1,4273 @@
 {
-  "generated_at": "2026-07-03T12:00:00+09:00",
+  "generated_at": "2026-07-05T17:00:00+09:00",
   "schema_version": "1.0",
   "note": "압축형 ETF 리밸런싱 트래커. 각 필드는 출처(source_tier)·confidence와 함께 저장. constituents가 비어있으면 Round 2 수집 대기.",
   "etfs": [
-    { "id": "396500", "name": "TIGER 반도체TOP10", "ticker": "396500", "issuer": "미래에셋 TIGER", "theme": "반도체", "underlying_index": "FnGuide 반도체TOP10 지수", "index_provider": "FnGuide", "constituent_count": 10, "aum_krw_eok": 105609, "aum_asof": "2026-07-02",
-      "rebalance": { "frequency_label": "연 2회 (4월·10월)", "months": [4,10], "next_date_est": "2026-10-16", "next_date_confidence": "Med", "rule": "상위 2종목 각 25% 상한, 하위 8종목 잔여 50% 유동시총 가중. 선물옵션 만기일 D+1~D+5.", "confidence": "High" },
-      "constituents": [], "confidence": "High",
-      "data_quality": { "invariants_passed": ["종목수=10(규칙일치)", "리밸주기 방법론 일치", "AUM 2소스 근접"], "invariants_failed": [], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity/rebalance", "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7396500001", "tier": "T1" }, { "field": "index_methodology", "url": "https://www.fnindex.co.kr/overview/detail/I/FI00.WLT.MSE", "tier": "T0" } ] },
-
-    { "id": "488080", "name": "TIGER 반도체TOP10레버리지", "ticker": "488080", "issuer": "미래에셋 TIGER", "theme": "반도체", "underlying_index": "FnGuide 반도체TOP10 지수 (2X 레버리지)", "index_provider": "FnGuide", "constituent_count": 10, "aum_krw_eok": 16700, "aum_asof": "2026-04",
-      "rebalance": { "frequency_label": "연 2회 (4월·10월)", "months": [4,10], "next_date_est": "2026-10-16", "next_date_confidence": "Med", "rule": "기초지수(FnGuide 반도체TOP10) 정기변경 승계, 2배 레버리지.", "confidence": "High" },
-      "constituents": [], "confidence": "High",
-      "data_quality": { "invariants_passed": ["기초지수 동일(반도체TOP10)"], "invariants_failed": [], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity", "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7488080003", "tier": "T1" } ] },
-
-    { "id": "0177R0", "name": "TIGER 반도체TOP10커버드콜액티브", "ticker": "0177R0", "issuer": "미래에셋 TIGER", "theme": "반도체", "underlying_index": "FnGuide 반도체TOP10 기반 (액티브 커버드콜)", "index_provider": "FnGuide", "constituent_count": 10, "aum_krw_eok": 9571, "aum_asof": "2026-04",
-      "rebalance": { "frequency_label": "연 2회 (4월·10월) 추정", "months": [4,10], "next_date_est": null, "next_date_confidence": "Low", "rule": "액티브 운용 — 기초 편입은 반도체TOP10 승계하나 커버드콜 오버레이. 리밸일정 재확인 필요.", "confidence": "Med" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": [], "invariants_failed": ["액티브라 리밸일정 불명확"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity", "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR70177R0000", "tier": "T1" } ] },
-
-    { "id": "395160", "name": "KODEX AI반도체TOP2플러스", "ticker": "395160", "issuer": "삼성 KODEX", "theme": "반도체", "underlying_index": "FnGuide AI반도체 TOP2+ 지수", "index_provider": "FnGuide", "constituent_count": null, "aum_krw_eok": 46659, "aum_asof": "2026-07-02",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["AUM 기준일 명확(T1)"], "invariants_failed": ["리밸일정 미확보", "구성종목 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity/aum", "url": "https://www.funetf.co.kr/product/etf/view/KR7395160005", "tier": "T1" }, { "field": "identity", "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFE9", "tier": "T0" } ] },
-
-    { "id": "0151S0", "name": "KODEX 미국AI반도체TOP3플러스", "ticker": "0151S0", "issuer": "삼성 KODEX", "theme": "반도체", "underlying_index": "Akros 미국 AI반도체 Top3 플러스 지수(PR)", "index_provider": "Akros", "constituent_count": null, "aum_krw_eok": null, "aum_asof": null,
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": [], "invariants_failed": ["해외기초", "리밸일정 미확보", "AUM 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity", "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFT7", "tier": "T0" } ] },
-
-    { "id": "0167A0", "name": "SOL AI반도체TOP2플러스", "ticker": "0167A0", "issuer": "신한 SOL", "theme": "반도체", "underlying_index": "FnGuide AI반도체 TOP2 플러스 지수(PR)", "index_provider": "FnGuide", "constituent_count": 10, "aum_krw_eok": 82700, "aum_asof": "2026-Q2",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "2소스 식별"], "invariants_failed": ["리밸일정 미확보", "AUM 기준일 대략"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.soletf.com/ko/fund/etf/211106", "tier": "T0" }, { "field": "aum", "url": "https://www.funetf.co.kr/product/etf/view/KR70167A0001", "tier": "T1" } ] },
-
-    { "id": "0093A0", "name": "RISE AI반도체TOP10", "ticker": "0093A0", "issuer": "KB RISE", "theme": "반도체", "underlying_index": "FnGuide AI Semiconductor TOP10 지수(PR)", "index_provider": "FnGuide", "constituent_count": 10, "aum_krw_eok": null, "aum_asof": null,
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10"], "invariants_failed": ["리밸일정 미확보", "AUM 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.riseetf.co.kr/prod/finderDetail/44j0", "tier": "T0" } ] },
-
-    { "id": "0164G0", "name": "RISE 차이나AI반도체TOP4Plus", "ticker": "0164G0", "issuer": "KB RISE", "theme": "반도체", "underlying_index": "Solactive China AI Semiconductor TOP 4 Plus Index", "index_provider": "Solactive", "constituent_count": null, "aum_krw_eok": 167, "aum_asof": "2026-03",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": [], "invariants_failed": ["해외기초", "리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.riseetf.co.kr/prod/finderDetail/44K2", "tier": "T0" } ] },
-
-    { "id": "469150", "name": "ACE AI반도체TOP3+", "ticker": "469150", "issuer": "한투 ACE", "theme": "반도체", "underlying_index": "FnGuide AI반도체 포커스 지수", "index_provider": "FnGuide", "constituent_count": 20, "aum_krw_eok": 12000, "aum_asof": "2026-H1",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "TOP3 각 25% + 17종목. (구 ACE AI반도체포커스에서 명칭변경)", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=20(규칙)"], "invariants_failed": ["리밸일정 미확보", "AUM 기준일 대략"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.aceetf.co.kr/fund/K55101E67600", "tier": "T0" } ] },
-
-    { "id": "471760", "name": "TIGER AI반도체핵심공정", "ticker": "471760", "issuer": "미래에셋 TIGER", "theme": "반도체", "underlying_index": "iSelect AI반도체핵심공정 지수", "index_provider": "KIS(iSelect)", "constituent_count": null, "aum_krw_eok": 942, "aum_asof": "2026",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": [], "invariants_failed": ["종목수 미확보", "리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity", "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7471760009", "tier": "T0" } ] },
-
-    { "id": "466920", "name": "SOL 조선TOP3플러스", "ticker": "466920", "issuer": "신한 SOL", "theme": "조선", "underlying_index": "FnGuide 조선 TOP3 플러스 지수(PR)", "index_provider": "FnGuide", "constituent_count": 13, "aum_krw_eok": null, "aum_asof": null,
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "TOP3 각 20% 상한 + 밸류체인.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=13", "2소스 식별"], "invariants_failed": ["AUM 출처 상충(1,568억 vs 1.66조) 재확인 필요", "리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.soletf.com/ko/fund/etf/211028", "tier": "T0" }, { "field": "identity", "url": "https://comp.wisereport.co.kr/company/c1010001.aspx?cmp_cd=466920", "tier": "T1" } ] },
-
-    { "id": "494670", "name": "TIGER 조선TOP10", "ticker": "494670", "issuer": "미래에셋 TIGER", "theme": "조선", "underlying_index": "iSelect 조선TOP10 지수(PR)", "index_provider": "KIS(iSelect)", "constituent_count": 10, "aum_krw_eok": 6353, "aum_asof": "2026-07-03",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "AUM 기준일 명확"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity/aum", "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7494670003", "tier": "T0" } ] },
-
-    { "id": "0115D0", "name": "KODEX 조선TOP10", "ticker": "0115D0", "issuer": "삼성 KODEX", "theme": "조선", "underlying_index": "KRX K조선TOP10 지수(PR)", "index_provider": "KRX", "constituent_count": 10, "aum_krw_eok": 2107, "aum_asof": "2026-05-04",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "KRX 지수(공신력 높음)"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFT1", "tier": "T0" }, { "field": "snapshot", "url": "https://wcomp.fnguide.com/etp/etfSnapshot?cmp_cd=0115D0", "tier": "T1" } ] },
-
-    { "id": "0080G0", "name": "KODEX K방산TOP10", "ticker": "0080G0", "issuer": "삼성 KODEX", "theme": "방산", "underlying_index": "iSelect K방산TOP10 지수(PR)", "index_provider": "KIS(iSelect)", "constituent_count": 10, "aum_krw_eok": 2200, "aum_asof": "2025-09-30",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10"], "invariants_failed": ["리밸일정 미확보", "AUM 기준일 오래됨(25.09)"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFR8", "tier": "T0" }, { "field": "holdings_pdf", "url": "https://m.samsungfund.com/sheet/20251013/2ETFR8_20250930.pdf", "tier": "T1" } ] },
-
-    { "id": "0100K0", "name": "KODEX K방산TOP10 레버리지", "ticker": "0100K0", "issuer": "삼성 KODEX", "theme": "방산", "underlying_index": "iSelect K방산TOP10 지수(PR) ×2", "index_provider": "KIS(iSelect)", "constituent_count": 10, "aum_krw_eok": null, "aum_asof": null,
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "기초지수 정기변경 승계, 2배 레버리지.", "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": ["기초지수 동일(K방산TOP10)"], "invariants_failed": ["AUM 미확보", "리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity", "url": "https://www.samsungfund.com/etf/insight/newsroom/view.do?seq=69815", "tier": "T1" } ] },
-
-    { "id": "ACE_K방산TOP5plus", "name": "ACE K방산TOP5+", "ticker": null, "issuer": "한투 ACE", "theme": "방산", "underlying_index": "KRX K-AI 방산TOP5+ 지수", "index_provider": "KRX", "constituent_count": 10, "aum_krw_eok": 200, "aum_asof": "2026-07(상장예정)",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "상위5 고정 80%. 2026-07-07 상장 예정 — 티커 미부여.", "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": [], "invariants_failed": ["티커 미부여(상장전)", "리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity", "url": "https://www.newspim.com/news/view/20260703000886", "tier": "T2" } ] },
-
-    { "id": "434730", "name": "HANARO 원자력iSelect", "ticker": "434730", "issuer": "NH-Amundi", "theme": "원자력", "underlying_index": "iSelect 원자력 지수(PR)", "index_provider": "KIS(iSelect)", "constituent_count": 15, "aum_krw_eok": 7500, "aum_asof": "2026-02-24",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "2025-12-17 리모델링(20→15종목, CAP 25%). 명칭엔 TOP-N 없으나 압축형.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=15(리모델링 반영)"], "invariants_failed": ["리밸일정 미확보", "AUM 기준일 오래됨"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.hanaroetf.com/investment/insight/gdpIBR8B35AXrcuT", "tier": "T1" } ] },
-
-    { "id": "364970", "name": "TIGER 바이오TOP10", "ticker": "364970", "issuer": "미래에셋 TIGER", "theme": "바이오", "underlying_index": "KRX 바이오 K-뉴딜지수", "index_provider": "KRX", "constituent_count": 10, "aum_krw_eok": 2844, "aum_asof": "2026-07-02",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "KRX K-뉴딜 계열, 지수규칙상 10종목. 정기변경 주기 재확인 필요.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "KRX 지수", "AUM 기준일 명확"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity/aum", "url": "https://www.funetf.co.kr/product/etf/view/KR7364970004", "tier": "T1" } ] },
-
-    { "id": "0000Z0", "name": "RISE 바이오TOP10액티브", "ticker": "0000Z0", "issuer": "KB RISE", "theme": "바이오", "underlying_index": "KRX 바이오 TOP10 지수 (액티브)", "index_provider": "KRX", "constituent_count": 24, "aum_krw_eok": 632, "aum_asof": "2026-07-03",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "액티브(실보유 24종, 벤치 TOP10).", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["AUM 기준일 명확"], "invariants_failed": ["티커 선행0 확인필요", "리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity", "url": "https://www.riseetf.co.kr/prod/finderDetail/44I0", "tier": "T0" } ] },
-
-    { "id": "365000", "name": "TIGER 인터넷TOP10", "ticker": "365000", "issuer": "미래에셋 TIGER", "theme": "인터넷", "underlying_index": "KRX 인터넷 K-뉴딜지수", "index_provider": "KRX", "constituent_count": 10, "aum_krw_eok": 387, "aum_asof": "2026-07-02",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "KRX K-뉴딜 계열, 10종목.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "KRX 지수"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity/aum", "url": "https://www.funetf.co.kr/product/etf/view/KR7365000009", "tier": "T1" } ] },
-
-    { "id": "364990", "name": "TIGER 게임TOP10", "ticker": "364990", "issuer": "미래에셋 TIGER", "theme": "게임", "underlying_index": "KRX 게임 K-뉴딜지수", "index_provider": "KRX", "constituent_count": 10, "aum_krw_eok": 246, "aum_asof": "2026-07-02",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "KRX K-뉴딜 계열, 10종목.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "KRX 지수"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity/aum", "url": "https://www.funetf.co.kr/product/etf/view/KR7364990002", "tier": "T1" } ] },
-
-    { "id": "0114X0", "name": "RISE 글로벌게임테크TOP3Plus", "ticker": "0114X0", "issuer": "KB RISE", "theme": "게임", "underlying_index": "Solactive-KEDI 글로벌 게임 테크 TOP3 플러스 지수", "index_provider": "Solactive(KEDI)", "constituent_count": 10, "aum_krw_eok": 616, "aum_asof": "2026-07-03",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "TOP3 플러스, 해외혼합.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "AUM 기준일 명확"], "invariants_failed": ["해외기초 일부", "리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.riseetf.co.kr/prod/finderDetail/44J5", "tier": "T0" } ] },
-
-    { "id": "466940", "name": "TIGER 은행고배당플러스TOP10", "ticker": "466940", "issuer": "미래에셋 TIGER", "theme": "금융", "underlying_index": "FnGuide 은행고배당플러스TOP10 지수", "index_provider": "FnGuide", "constituent_count": 10, "aum_krw_eok": 6923, "aum_asof": "2026",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "FnGuide 계열, 10종목.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "FnGuide 지수"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7466940004", "tier": "T0" } ] },
-
-    { "id": "0177X0", "name": "ACE K휴머노이드로봇산업TOP2+", "ticker": "0177X0", "issuer": "한투 ACE", "theme": "로봇", "underlying_index": "Akros K-휴머노이드로봇 TOP2+ 지수", "index_provider": "Akros(KIS계열)", "constituent_count": 15, "aum_krw_eok": 5830, "aum_asof": "2026-05-08",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "TOP2 각 20% + 밸류체인.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=15", "2소스 식별"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.aceetf.co.kr/fund/K55101EU0214", "tier": "T0" } ] },
-
-    { "id": "445290", "name": "KODEX 로봇액티브", "ticker": "445290", "issuer": "삼성 KODEX", "theme": "로봇", "underlying_index": "iSelect K-로봇테마 지수 (액티브)", "index_provider": "KIS(iSelect)", "constituent_count": null, "aum_krw_eok": 5273, "aum_asof": "2026-01",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "액티브 집중형(명칭에 TOP-N 없음, 경계 사례).", "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": [], "invariants_failed": ["액티브 종목수 미확보", "리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFH5", "tier": "T0" } ] },
-
-    { "id": "0172Y0", "name": "ACE K수출핵심TOP10산업액티브", "ticker": "0172Y0", "issuer": "한투 ACE", "theme": "수출복합", "underlying_index": "10개 산업 TOP2 바스켓 (액티브)", "index_provider": "KIS/자체", "constituent_count": 13, "aum_krw_eok": null, "aum_asof": null,
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "액티브, 산업별 TOP2.", "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": [], "invariants_failed": ["AUM 미확보", "리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity", "url": "https://www.aceetf.co.kr/info/report/1347", "tier": "T0" } ] },
-
-    { "id": "364980", "name": "TIGER 2차전지TOP10", "ticker": "364980", "issuer": "미래에셋 TIGER", "theme": "2차전지", "underlying_index": "KRX 2차전지 K-뉴딜지수", "index_provider": "KRX", "constituent_count": 10, "aum_krw_eok": 6257, "aum_asof": "2026-07-02",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "KRX K-뉴딜 계열, 10종목.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "KRX 지수", "AUM 기준일 명확"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity/aum", "url": "https://www.funetf.co.kr/product/etf/view/KR7364980003", "tier": "T1" } ] },
-
-    { "id": "412570", "name": "TIGER 2차전지TOP10레버리지", "ticker": "412570", "issuer": "미래에셋 TIGER", "theme": "2차전지", "underlying_index": "KRX 2차전지 TOP10 지수 (2X)", "index_provider": "KRX", "constituent_count": 10, "aum_krw_eok": 1537, "aum_asof": "2026-07-03",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "기초지수 정기변경 승계, 2배 레버리지.", "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "AUM 기준일 명확"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity/aum", "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7412570004", "tier": "T0" } ] },
-
-    { "id": "465330", "name": "RISE 2차전지TOP10", "ticker": "465330", "issuer": "KB RISE", "theme": "2차전지", "underlying_index": "iSelect 2차전지 TOP10 지수", "index_provider": "KIS(iSelect)", "constituent_count": 10, "aum_krw_eok": 619, "aum_asof": "2026-07-03",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=10", "AUM 기준일 명확"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity/aum", "url": "https://www.riseetf.co.kr/prod/finderDetail/44f2", "tier": "T0" } ] },
-
-    { "id": "465350", "name": "RISE 2차전지TOP10인버스(합성)", "ticker": "465350", "issuer": "KB RISE", "theme": "2차전지", "underlying_index": "iSelect 2차전지 TOP10 지수 (-1X)", "index_provider": "KIS(iSelect)", "constituent_count": 10, "aum_krw_eok": null, "aum_asof": null,
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "합성 인버스, 기초지수 정기변경 승계.", "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": ["기초지수 동일"], "invariants_failed": ["AUM 미확보", "리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.riseetf.co.kr/prod/finderDetail/44f1", "tier": "T0" } ] },
-
-    { "id": "461950", "name": "KODEX 2차전지핵심소재10", "ticker": "461950", "issuer": "삼성 KODEX", "theme": "2차전지", "underlying_index": "FnGuide 2차전지핵심소재10 지수", "index_provider": "FnGuide", "constituent_count": 10, "aum_krw_eok": null, "aum_asof": null,
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": ["종목수=10(지수명)"], "invariants_failed": ["AUM 미확보", "리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFK1", "tier": "T0" } ] },
-
-    { "id": "457990", "name": "PLUS 태양광&ESS", "ticker": "457990", "issuer": "한화 PLUS", "theme": "신재생", "underlying_index": "FnGuide 태양광&ESS 지수", "index_provider": "FnGuide", "constituent_count": 11, "aum_krw_eok": 1181, "aum_asof": "2026-07-02",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=11", "AUM 기준일 명확"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity/aum", "url": "https://www.plusetf.co.kr/product/detail?n=006279", "tier": "T0" } ] },
-
-    { "id": "487240", "name": "KODEX AI전력핵심설비", "ticker": "487240", "issuer": "삼성 KODEX", "theme": "전력인프라", "underlying_index": "iSelect AI전력핵심설비 지수(PR)", "index_provider": "KIS(iSelect)", "constituent_count": 15, "aum_krw_eok": null, "aum_asof": null,
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": "상위10=90.4% 집중.", "confidence": "Low" },
-      "constituents": [], "confidence": "Low",
-      "data_quality": { "invariants_passed": ["종목수=15"], "invariants_failed": ["AUM 미확보", "리밸일정 미확보"], "corroborating_sources": 2 },
-      "sources": [ { "field": "identity", "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFN7", "tier": "T0" } ] },
-
-    { "id": "0101N0", "name": "RISE AI전력인프라", "ticker": "0101N0", "issuer": "KB RISE", "theme": "전력인프라", "underlying_index": "KRX-Akros AI 전력인프라 지수", "index_provider": "KRX-Akros", "constituent_count": 15, "aum_krw_eok": 7007, "aum_asof": "2026-07-03",
-      "rebalance": { "frequency_label": "수집 대기", "months": [], "next_date_est": null, "next_date_confidence": "Low", "rule": null, "confidence": "Low" },
-      "constituents": [], "confidence": "Med",
-      "data_quality": { "invariants_passed": ["종목수=15", "AUM 기준일 명확"], "invariants_failed": ["리밸일정 미확보"], "corroborating_sources": 1 },
-      "sources": [ { "field": "identity/aum", "url": "https://www.riseetf.co.kr/prod/finderDetail/44J3", "tier": "T0" } ] }
-  ]
+    {
+      "id": "396500",
+      "name": "TIGER 반도체TOP10",
+      "ticker": "396500",
+      "issuer": "미래에셋 TIGER",
+      "theme": "반도체",
+      "underlying_index": "FnGuide 반도체TOP10 지수",
+      "index_provider": "FnGuide",
+      "constituent_count": 10,
+      "aum_krw_eok": 105609,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 2회 (4월·10월)",
+        "months": [
+          4,
+          10
+        ],
+        "next_date_est": "2026-10-12",
+        "next_date_confidence": "High",
+        "rule": "종목선정 3·9월말 / 비중확정 정기변경일 2영업일 전 종가. 4·10월 선물옵션 만기일 익주 첫 영업일 실시. TOP2 각 25% 고정, 하위 8종목 유동시총가중. 수시: 월말 5일 연속 30% 초과 시 재계산.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 28.18
+        },
+        {
+          "rank": 2,
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 27.71
+        },
+        {
+          "rank": 3,
+          "name": "SK스퀘어",
+          "code": "402340",
+          "weight": 23.55
+        },
+        {
+          "rank": 4,
+          "name": "한미반도체",
+          "code": "042700",
+          "weight": 4.13
+        },
+        {
+          "rank": 5,
+          "name": "주성엔지니어링",
+          "code": "036930",
+          "weight": 3.96
+        },
+        {
+          "rank": 6,
+          "name": "이수페타시스",
+          "code": "007660",
+          "weight": 3.65
+        },
+        {
+          "rank": 7,
+          "name": "원익IPS",
+          "code": "240810",
+          "weight": 2.69
+        },
+        {
+          "rank": 8,
+          "name": "DB하이텍",
+          "code": "000990",
+          "weight": 2.19
+        },
+        {
+          "rank": 9,
+          "name": "이오테크닉스",
+          "code": "039030",
+          "weight": 1.93
+        },
+        {
+          "rank": 10,
+          "name": "리노공업",
+          "code": "058470",
+          "weight": 1.9
+        },
+        {
+          "rank": 11,
+          "name": "원화현금",
+          "code": "-",
+          "weight": 0.1
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 2소스 근접",
+          "구성종목 as_of 2026-07-03",
+          "리밸일 정정: 10-16→10-12(만기 익주 월요일)",
+          "리밸일정 확보(T0 방법론 원문)",
+          "리밸주기 방법론 일치",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10(규칙일치)",
+          "종목코드 개별 대조(네이버)",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 3
+      },
+      "sources": [
+        {
+          "field": "identity/rebalance",
+          "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7396500001",
+          "tier": "T1"
+        },
+        {
+          "field": "index_methodology",
+          "url": "https://www.fnindex.co.kr/overview/detail/I/FI00.WLT.MSE",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://m.stock.naver.com/api/stock/396500/etfAnalysis",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide_Semiconductor%20TOP10_Index_Methodology_Book_MR_(20210601)_v1.1.pdf",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "ticker": "488080",
+      "issuer": "미래에셋 TIGER",
+      "theme": "반도체",
+      "underlying_index": "FnGuide 반도체TOP10 지수 (2X 레버리지)",
+      "index_provider": "FnGuide",
+      "constituent_count": 10,
+      "aum_krw_eok": 6638,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 2회 (4월·10월)",
+        "months": [
+          4,
+          10
+        ],
+        "next_date_est": "2026-10-12",
+        "next_date_confidence": "High",
+        "rule": "기초지수 정기변경 승계(2X). 종목선정 3·9월말 / 비중확정 정기변경일 2영업일 전 종가. 4·10월 선물옵션 만기일 익주 첫 영업일 실시. TOP2 각 25% 고정, 하위 8종목 유동시총가중. 수시: 월말 5일 연속 30% 초과 시 재계산.",
+        "confidence": "High"
+      },
+      "constituents": [],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 갱신 6,638억(T1) — 구 1.67조(04월 기사)는 폐기",
+          "구성종목: 기초지수(TIGER 반도체TOP10) 바스켓 승계",
+          "기초지수 동일(반도체TOP10)",
+          "리밸일정 확보(T0 방법론 원문)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 1
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7488080003",
+          "tier": "T1"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/488080/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "0177R0",
+      "name": "TIGER 반도체TOP10커버드콜액티브",
+      "ticker": "0177R0",
+      "issuer": "미래에셋 TIGER",
+      "theme": "반도체",
+      "underlying_index": "FnGuide 반도체TOP10 기반 (액티브 커버드콜)",
+      "index_provider": "FnGuide",
+      "constituent_count": 10,
+      "aum_krw_eok": 8445,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 2회 (4월·10월) — 기초 승계, 커버드콜 오버레이는 액티브",
+        "months": [
+          4,
+          10
+        ],
+        "next_date_est": "2026-10-12",
+        "next_date_confidence": "Med",
+        "rule": "기초 편입은 반도체TOP10 승계(4·10월), 옵션 오버레이는 액티브 재량.",
+        "confidence": "Med"
+      },
+      "constituents": [],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 갱신 8,445억(T1)",
+          "구성종목: 기초지수(TIGER 반도체TOP10) 바스켓 승계",
+          "기초지수 일정 승계",
+          "등급 재판정: 기초승계 문서화+AUM T1 갱신 — 오버레이는 특성(리밸 confidence Med 유지)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 1
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR70177R0000",
+          "tier": "T1"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/0177R0/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "395160",
+      "name": "KODEX AI반도체TOP2플러스",
+      "ticker": "395160",
+      "issuer": "삼성 KODEX",
+      "theme": "반도체",
+      "underlying_index": "FnGuide AI반도체 TOP2+ 지수 (FI00.WLT.NMS)",
+      "index_provider": "FnGuide",
+      "constituent_count": 15,
+      "aum_krw_eok": 46659,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 2회 (6월·12월)",
+        "months": [
+          6,
+          12
+        ],
+        "next_date_est": "2026-12-14",
+        "next_date_confidence": "High",
+        "rule": "종목선정 5·11월말 / 비중확정 만기일 종가. 6·12월 만기일 D+2 실시. TOP2 각 25%, 전종목 25% 실링, 최대 15종목(시총 1조↑). 2026-05-13 지수 개편(24→15종목).",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "SK스퀘어",
+          "code": "402340",
+          "weight": 26.21
+        },
+        {
+          "rank": 2,
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 24.44
+        },
+        {
+          "rank": 3,
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 22.68
+        },
+        {
+          "rank": 4,
+          "name": "삼성전기",
+          "code": "009150",
+          "weight": 20.17
+        },
+        {
+          "rank": 5,
+          "name": "한미반도체",
+          "code": "042700",
+          "weight": 1.77
+        },
+        {
+          "rank": 6,
+          "name": "이수페타시스",
+          "code": "007660",
+          "weight": 1.25
+        },
+        {
+          "rank": 7,
+          "name": "리노공업",
+          "code": "058470",
+          "weight": 0.71
+        },
+        {
+          "rank": 8,
+          "name": "DB하이텍",
+          "code": "000990",
+          "weight": 0.68
+        },
+        {
+          "rank": 9,
+          "name": "피에스케이",
+          "code": "319660",
+          "weight": 0.68
+        },
+        {
+          "rank": 10,
+          "name": "HPSP",
+          "code": "403870",
+          "weight": 0.54
+        },
+        {
+          "rank": 11,
+          "name": "ISC",
+          "code": "095340",
+          "weight": 0.3
+        },
+        {
+          "rank": 12,
+          "name": "두산테스나",
+          "code": "131970",
+          "weight": 0.23
+        },
+        {
+          "rank": 13,
+          "name": "에스앤에스텍",
+          "code": "101490",
+          "weight": 0.15
+        },
+        {
+          "rank": 14,
+          "name": "해성디에스",
+          "code": "195870",
+          "weight": 0.12
+        },
+        {
+          "rank": 15,
+          "name": "SFA반도체",
+          "code": "036540",
+          "weight": 0.07
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확(T1)",
+          "T0 공식 PDF API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론 원문)",
+          "비중합 검증 통과(±0.5%)",
+          "주식 15종=개편 후 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://www.funetf.co.kr/product/etf/view/KR7395160005",
+          "tier": "T1"
+        },
+        {
+          "field": "identity",
+          "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFE9",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide_AI_Semiconductor_TOP2_Index_Methodology_Book_(20260406)_v2.5.pdf",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETFE9.do?gijunYMD=2026.07.03",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "0151S0",
+      "name": "KODEX 미국AI반도체TOP3플러스",
+      "ticker": "0151S0",
+      "issuer": "삼성 KODEX",
+      "theme": "반도체",
+      "underlying_index": "Akros 미국 AI반도체 Top3 플러스 지수(PR)",
+      "index_provider": "Akros",
+      "constituent_count": 10,
+      "aum_krw_eok": 2491,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 4회 (3·6·9·12월, 미국 옵션만기일)",
+        "months": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "next_date_est": "2026-09-18",
+        "next_date_confidence": "High",
+        "rule": "비중결정일=미국 옵션만기 D-5, 만기일(셋째 금요일) 당일 수행 — 한국 만기 비연동. 1위 22%·2/3위 각 20%(합 62%) + 7종목 15% 상한. 수시 패스트엔트리 실적('26-05-26 Cerebras).",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "INTEL",
+          "code": "INTC",
+          "weight": 21.32
+        },
+        {
+          "rank": 2,
+          "name": "NVIDIA",
+          "code": "NVDA",
+          "weight": 20.83
+        },
+        {
+          "rank": 3,
+          "name": "BROADCOM",
+          "code": "AVGO",
+          "weight": 18.81
+        },
+        {
+          "rank": 4,
+          "name": "AMD",
+          "code": "AMD",
+          "weight": 9.75
+        },
+        {
+          "rank": 5,
+          "name": "MICRON",
+          "code": "MU",
+          "weight": 7.74
+        },
+        {
+          "rank": 6,
+          "name": "TSMC ADR",
+          "code": "TSM",
+          "weight": 7.0
+        },
+        {
+          "rank": 7,
+          "name": "Cerebras Systems",
+          "code": "CBRS",
+          "weight": 5.96
+        },
+        {
+          "rank": 8,
+          "name": "Sandisk",
+          "code": "SNDK",
+          "weight": 5.01
+        },
+        {
+          "rank": 9,
+          "name": "ARM Holdings",
+          "code": "ARM",
+          "weight": 2.09
+        },
+        {
+          "rank": 10,
+          "name": "MARVELL",
+          "code": "MRVL",
+          "weight": 1.48
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 확보 2,491억(T1)",
+          "T0 공식 PDF API",
+          "TOP3 합산 60.96% 규칙 일치",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론)",
+          "비중합 검증 통과(±0.5%)",
+          "수시변경 이벤트 감시 필요(패스트엔트리)",
+          "주식 10종",
+          "해외기초(미국) — 특성 기록"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFT7",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETFT7.do?gijunYMD=2026.07.03",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://www.akrostec.com/indices/AUAIST3P",
+          "tier": "T0"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/0151S0/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "0167A0",
+      "name": "SOL AI반도체TOP2플러스",
+      "ticker": "0167A0",
+      "issuer": "신한 SOL",
+      "theme": "반도체",
+      "underlying_index": "FnGuide AI반도체TOP2플러스 지수 (FI00.WLT.KSS)",
+      "index_provider": "FnGuide",
+      "constituent_count": 10,
+      "aum_krw_eok": 73001,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 4회 (1·4·7·10월)",
+        "months": [
+          1,
+          4,
+          7,
+          10
+        ],
+        "next_date_est": "2026-07-13",
+        "next_date_confidence": "High",
+        "rule": "종목선정 3·6·9·12월말 / 비중확정 만기일 D-1 종가(7/8). 1·4·7·10월 옵션 만기일 D+2 실시. TOP2 각 25% 고정 + 8종목(모멘텀4+시총4) 15% 실링, 총 10종목. ※KODEX TOP2+와 별개 지수.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "삼성전기",
+          "code": "009150",
+          "weight": 26.83
+        },
+        {
+          "rank": 2,
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 25.17
+        },
+        {
+          "rank": 3,
+          "name": "SK스퀘어",
+          "code": "402340",
+          "weight": 18.87
+        },
+        {
+          "rank": 4,
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 16.16
+        },
+        {
+          "rank": 5,
+          "name": "LG이노텍",
+          "code": "011070",
+          "weight": 7.03
+        },
+        {
+          "rank": 6,
+          "name": "이수페타시스",
+          "code": "007660",
+          "weight": 3.75
+        },
+        {
+          "rank": 7,
+          "name": "ISC",
+          "code": "095340",
+          "weight": 0.91
+        },
+        {
+          "rank": 8,
+          "name": "코리아써키트",
+          "code": "007810",
+          "weight": 0.53
+        },
+        {
+          "rank": 9,
+          "name": "RFHIC",
+          "code": "218410",
+          "weight": 0.53
+        },
+        {
+          "rank": 10,
+          "name": "엑시콘",
+          "code": "092870",
+          "weight": 0.08
+        },
+        {
+          "rank": 11,
+          "name": "현금성자산",
+          "code": "-",
+          "weight": 0.13
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "2소스 식별",
+          "AUM 갱신 7조3,001억(T1)",
+          "T0 운용사 PDF API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론 원문)",
+          "비중합 검증 통과(±0.5%)",
+          "임박: 2026-07-13 정기변경(D-8)",
+          "종목수=10",
+          "주식 10종=규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.soletf.com/ko/fund/etf/211106",
+          "tier": "T0"
+        },
+        {
+          "field": "aum",
+          "url": "https://www.funetf.co.kr/product/etf/view/KR70167A0001",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide%20AI%20Semiconductor%20TOP2%20Plus%20Index_Methodology_Book_(20260102)_v1.2.pdf",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.soletf.com/api/etf/pds/pdf/211106",
+          "tier": "T0"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/0167A0/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "0093A0",
+      "name": "RISE AI반도체TOP10",
+      "ticker": "0093A0",
+      "issuer": "KB RISE",
+      "theme": "반도체",
+      "underlying_index": "FnGuide AI Semiconductor TOP10 지수(PR)",
+      "index_provider": "FnGuide",
+      "constituent_count": 10,
+      "aum_krw_eok": 1873,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 4회 (1·4·7·10월)",
+        "months": [
+          1,
+          4,
+          7,
+          10
+        ],
+        "next_date_est": "2026-07-13",
+        "next_date_confidence": "High",
+        "rule": "종목선정 3·6·9·12월말 / 비중확정 만기일(7/9) 종가. 1·4·7·10월 만기일 D+2 실시. 키워드 0.7+시총 0.3으로 10종목, 15%/10% 실링.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 29.02
+        },
+        {
+          "rank": 2,
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 18.53
+        },
+        {
+          "rank": 3,
+          "name": "원익IPS",
+          "code": "240810",
+          "weight": 9.82
+        },
+        {
+          "rank": 4,
+          "name": "피에스케이홀딩스",
+          "code": "031980",
+          "weight": 9.1
+        },
+        {
+          "rank": 5,
+          "name": "테크윙",
+          "code": "089030",
+          "weight": 7.98
+        },
+        {
+          "rank": 6,
+          "name": "한미반도체",
+          "code": "042700",
+          "weight": 6.76
+        },
+        {
+          "rank": 7,
+          "name": "리노공업",
+          "code": "058470",
+          "weight": 5.85
+        },
+        {
+          "rank": 8,
+          "name": "ISC",
+          "code": "095340",
+          "weight": 5.01
+        },
+        {
+          "rank": 9,
+          "name": "와이씨",
+          "code": "232140",
+          "weight": 4.05
+        },
+        {
+          "rank": 10,
+          "name": "디아이",
+          "code": "003160",
+          "weight": 3.62
+        },
+        {
+          "rank": 11,
+          "name": "현금성자산",
+          "code": "-",
+          "weight": 0.26
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "구성종목 as_of 2026-07-05",
+          "리밸일정 확보(T0 방법론 원문)",
+          "비중합=100.0%±0.5",
+          "임박: 2026-07-13 정기변경(D-8)",
+          "종목수=10",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44j0",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44j0",
+          "tier": "T0"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/0093A0/etfAnalysis",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide_AI_Semiconductor_TOP10_Index_Methodology_Book_(20250602)_v1.0.pdf",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "0164G0",
+      "name": "RISE 차이나AI반도체TOP4Plus",
+      "ticker": "0164G0",
+      "issuer": "KB RISE",
+      "theme": "반도체",
+      "underlying_index": "Solactive China AI Semiconductor TOP 4 Plus Index",
+      "index_provider": "Solactive",
+      "constituent_count": 15,
+      "aum_krw_eok": 393,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 4회 (2·5·8·11월 말) + 월별 IPO 패스트엔트리",
+        "months": [
+          2,
+          5,
+          8,
+          11
+        ],
+        "next_date_est": "2026-08-31",
+        "next_date_confidence": "Med",
+        "rule": "해당월 마지막 영업일 장마감 조정→익영업일 시초가 효력(효력 9/1). 카테고리 대표 TOP4 각 15% 고정(60%) + 11종목 10% 상한. Selection day 비공개.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "NAURA Technology",
+          "code": "002371.SZ",
+          "weight": 17.69
+        },
+        {
+          "rank": 2,
+          "name": "SMIC (H)",
+          "code": "0981.HK",
+          "weight": 13.99
+        },
+        {
+          "rank": 3,
+          "name": "Cambricon",
+          "code": "688256.SH",
+          "weight": 13.77
+        },
+        {
+          "rank": 4,
+          "name": "Zhongji Innolight",
+          "code": "300308.SZ",
+          "weight": 13.11
+        },
+        {
+          "rank": 5,
+          "name": "Eoptolink",
+          "code": "300502.SZ",
+          "weight": 6.83
+        },
+        {
+          "rank": 6,
+          "name": "Hygon",
+          "code": "688041.SH",
+          "weight": 5.98
+        },
+        {
+          "rank": 7,
+          "name": "Hua Hong Semi",
+          "code": "1347.HK",
+          "weight": 4.23
+        },
+        {
+          "rank": 8,
+          "name": "Suzhou TFC",
+          "code": "300394.SZ",
+          "weight": 3.97
+        },
+        {
+          "rank": 9,
+          "name": "Accelink",
+          "code": "002281.SZ",
+          "weight": 3.45
+        },
+        {
+          "rank": 10,
+          "name": "Biwin Storage",
+          "code": "688525.SH",
+          "weight": 3.44
+        },
+        {
+          "rank": 11,
+          "name": "Three-Circle",
+          "code": "300408.SZ",
+          "weight": 3.31
+        },
+        {
+          "rank": 12,
+          "name": "Piotech",
+          "code": "688072.SH",
+          "weight": 2.89
+        },
+        {
+          "rank": 13,
+          "name": "AMEC",
+          "code": "688012.SH",
+          "weight": 2.78
+        },
+        {
+          "rank": 14,
+          "name": "Montage Tech",
+          "code": "688008.SH",
+          "weight": 2.77
+        },
+        {
+          "rank": 15,
+          "name": "Iluvatar CoreX",
+          "code": "CNE100007DV0",
+          "weight": 1.13
+        },
+        {
+          "rank": 16,
+          "name": "현금성자산",
+          "code": "-",
+          "weight": 0.67
+        }
+      ],
+      "confidence": "Med",
+      "data_quality": {
+        "invariants_passed": [
+          "TOP4 합산 58.6% 규칙 일치",
+          "구성종목 as_of 2026-07-05",
+          "리밸일정 확보(T0 공지+T1 설명서)",
+          "비중합=100.0%±0.5"
+        ],
+        "invariants_failed": [
+          "Iluvatar CoreX 현지티커 미검증(ISIN만)",
+          "Selection day 미공개(guideline 미확보)"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44K2",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44K2",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://www.solactive.com/announcements/59152",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "469150",
+      "name": "ACE AI반도체TOP3+",
+      "ticker": "469150",
+      "issuer": "한투 ACE",
+      "theme": "반도체",
+      "underlying_index": "FnGuide AI 반도체 TOP3+ 지수 (구 AI반도체 포커스)",
+      "index_provider": "FnGuide",
+      "constituent_count": 20,
+      "aum_krw_eok": 12616,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 4회 (3·6·9·12월)",
+        "months": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "next_date_est": "2026-09-14",
+        "next_date_confidence": "High",
+        "rule": "비중확정 만기일 종가, 만기일 D+2 실시. 재무스코어 상위 3종목 각 25% + 17종목 동일가중(~1.47%), 20종목.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 28.91
+        },
+        {
+          "rank": 2,
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 26.59
+        },
+        {
+          "rank": 3,
+          "name": "한미반도체",
+          "code": "042700",
+          "weight": 20.96
+        },
+        {
+          "rank": 4,
+          "name": "삼성전기",
+          "code": "009150",
+          "weight": 1.73
+        },
+        {
+          "rank": 5,
+          "name": "파크시스템스",
+          "code": "140860",
+          "weight": 1.64
+        },
+        {
+          "rank": 6,
+          "name": "이수페타시스",
+          "code": "007660",
+          "weight": 1.58
+        },
+        {
+          "rank": 7,
+          "name": "원익IPS",
+          "code": "240810",
+          "weight": 1.52
+        },
+        {
+          "rank": 8,
+          "name": "주성엔지니어링",
+          "code": "036930",
+          "weight": 1.51
+        },
+        {
+          "rank": 9,
+          "name": "제주반도체",
+          "code": "080220",
+          "weight": 1.5
+        },
+        {
+          "rank": 10,
+          "name": "하나마이크론",
+          "code": "067310",
+          "weight": 1.45
+        },
+        {
+          "rank": 11,
+          "name": "대덕전자",
+          "code": "353200",
+          "weight": 1.36
+        },
+        {
+          "rank": 12,
+          "name": "LG이노텍",
+          "code": "011070",
+          "weight": 1.34
+        },
+        {
+          "rank": 13,
+          "name": "ISC",
+          "code": "095340",
+          "weight": 1.32
+        },
+        {
+          "rank": 14,
+          "name": "HPSP",
+          "code": "403870",
+          "weight": 1.29
+        },
+        {
+          "rank": 15,
+          "name": "테크윙",
+          "code": "089030",
+          "weight": 1.27
+        },
+        {
+          "rank": 16,
+          "name": "파두",
+          "code": "440110",
+          "weight": 1.25
+        },
+        {
+          "rank": 17,
+          "name": "이오테크닉스",
+          "code": "039030",
+          "weight": 1.24
+        },
+        {
+          "rank": 18,
+          "name": "DB하이텍",
+          "code": "000990",
+          "weight": 1.23
+        },
+        {
+          "rank": 19,
+          "name": "리노공업",
+          "code": "058470",
+          "weight": 1.22
+        },
+        {
+          "rank": 20,
+          "name": "두산테스나",
+          "code": "131970",
+          "weight": 1.08
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "T0 운용사 엑셀 API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론 원문)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=20(규칙)",
+          "주식 20종=규칙 일치(TOP3 76.5% 집중)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.aceetf.co.kr/fund/K55101E67600",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide_AI_Semiconductor_TOP3_Plus_Price_Return_Index_Methodology_Book_(20230920)_v1.5.pdf",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://papi.aceetf.co.kr/api/funds/K55101E67600/pdf/down",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "471760",
+      "name": "TIGER AI반도체핵심공정",
+      "ticker": "471760",
+      "issuer": "미래에셋 TIGER",
+      "theme": "반도체",
+      "underlying_index": "iSelect AI반도체핵심공정 지수",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 20,
+      "aum_krw_eok": 942,
+      "aum_asof": "2026",
+      "rebalance": {
+        "frequency_label": "연 4회 (1·4·7·10월)",
+        "months": [
+          1,
+          4,
+          7,
+          10
+        ],
+        "next_date_est": "2026-07-13",
+        "next_date_confidence": "Low",
+        "rule": "'24-07-12부 연4회·시총가중으로 변경. 시총 3,000억↑·유동비율 10%↑, NLP 필터+지수위 선정. 시행일 미명시 — 만기 D+2 유추 시 7/13(임박). KIND 공시로 실일자 확인 필요.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "한미반도체",
+          "code": "042700",
+          "weight": 23.67
+        },
+        {
+          "rank": 2,
+          "name": "이수페타시스",
+          "code": "007660",
+          "weight": 16.31
+        },
+        {
+          "rank": 3,
+          "name": "리노공업",
+          "code": "058470",
+          "weight": 16.19
+        },
+        {
+          "rank": 4,
+          "name": "이오테크닉스",
+          "code": "039030",
+          "weight": 10.71
+        },
+        {
+          "rank": 5,
+          "name": "ISC",
+          "code": "095340",
+          "weight": 7.19
+        },
+        {
+          "rank": 6,
+          "name": "대덕전자",
+          "code": "353200",
+          "weight": 4.87
+        },
+        {
+          "rank": 7,
+          "name": "심텍",
+          "code": "222800",
+          "weight": 3.68
+        },
+        {
+          "rank": 8,
+          "name": "HPSP",
+          "code": "403870",
+          "weight": 3.04
+        },
+        {
+          "rank": 9,
+          "name": "피에스케이홀딩스",
+          "code": "031980",
+          "weight": 2.35
+        },
+        {
+          "rank": 10,
+          "name": "하나마이크론",
+          "code": "067310",
+          "weight": 2.08
+        },
+        {
+          "rank": 11,
+          "name": "한화비전",
+          "code": "489790",
+          "weight": 1.96
+        },
+        {
+          "rank": 12,
+          "name": "코리아써키트",
+          "code": "007810",
+          "weight": 1.47
+        },
+        {
+          "rank": 13,
+          "name": "파크시스템스",
+          "code": "140860",
+          "weight": 1.39
+        },
+        {
+          "rank": 14,
+          "name": "테크윙",
+          "code": "089030",
+          "weight": 1.32
+        },
+        {
+          "rank": 15,
+          "name": "에스앤에스텍",
+          "code": "101490",
+          "weight": 0.81
+        },
+        {
+          "rank": 16,
+          "name": "와이씨",
+          "code": "232140",
+          "weight": 0.75
+        },
+        {
+          "rank": 17,
+          "name": "SFA반도체",
+          "code": "036540",
+          "weight": 0.68
+        },
+        {
+          "rank": 18,
+          "name": "넥스틴",
+          "code": "348210",
+          "weight": 0.37
+        },
+        {
+          "rank": 19,
+          "name": "네오셈",
+          "code": "253590",
+          "weight": 0.36
+        },
+        {
+          "rank": 20,
+          "name": "펨트론",
+          "code": "168360",
+          "weight": 0.3
+        },
+        {
+          "rank": 21,
+          "name": "원화현금",
+          "code": "-",
+          "weight": 0.53
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(주기 T1)",
+          "비중합 검증 통과(±0.5%)",
+          "종목코드 개별 대조(네이버)",
+          "주식 20종(iSelect 지수 규칙)"
+        ],
+        "invariants_failed": [
+          "시행일 규칙 미명시(D+2 유추) — 임박이라 재확인 필수"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7471760009",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://navercomp.wisereport.co.kr/v2/ETF/index.aspx?cmp_cd=471760",
+          "tier": "T2"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://investments.miraeasset.com/tigeretf/upload/etf/20260515085136005518.pdf",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "466920",
+      "name": "SOL 조선TOP3플러스",
+      "ticker": "466920",
+      "issuer": "신한 SOL",
+      "theme": "조선",
+      "underlying_index": "FnGuide 조선 TOP3 플러스 지수(PR)",
+      "index_provider": "FnGuide",
+      "constituent_count": 13,
+      "aum_krw_eok": 16604,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 4회 (2·5·8·11월)",
+        "months": [
+          2,
+          5,
+          8,
+          11
+        ],
+        "next_date_est": "2026-08-18",
+        "next_date_confidence": "High",
+        "rule": "종목선정 1·4·7·10월말 / 비중확정 만기일 D-1 종가. 2·5·8·11월 만기일 D+2 실시(8/17 대체공휴일 반영). TOP3 25% 캡 + 플러스 20% 실링, 10~13종목. ※운용사 소개문(연2회·20%)은 구버전, v1.4 방법론 우선.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "한화오션",
+          "code": "042660",
+          "weight": 26.94
+        },
+        {
+          "rank": 2,
+          "name": "HD현대중공업",
+          "code": "329180",
+          "weight": 25.2
+        },
+        {
+          "rank": 3,
+          "name": "삼성중공업",
+          "code": "010140",
+          "weight": 23.13
+        },
+        {
+          "rank": 4,
+          "name": "HD한국조선해양",
+          "code": "009540",
+          "weight": 14.72
+        },
+        {
+          "rank": 5,
+          "name": "HD현대마린솔루션",
+          "code": "443060",
+          "weight": 2.88
+        },
+        {
+          "rank": 6,
+          "name": "한화엔진",
+          "code": "082740",
+          "weight": 2.58
+        },
+        {
+          "rank": 7,
+          "name": "HD현대마린엔진",
+          "code": "071970",
+          "weight": 1.25
+        },
+        {
+          "rank": 8,
+          "name": "한국카본",
+          "code": "017960",
+          "weight": 0.76
+        },
+        {
+          "rank": 9,
+          "name": "대한조선",
+          "code": "439260",
+          "weight": 0.48
+        },
+        {
+          "rank": 10,
+          "name": "성광벤드",
+          "code": "014620",
+          "weight": 0.44
+        },
+        {
+          "rank": 11,
+          "name": "STX엔진",
+          "code": "077970",
+          "weight": 0.39
+        },
+        {
+          "rank": 12,
+          "name": "태광",
+          "code": "023160",
+          "weight": 0.3
+        },
+        {
+          "rank": 13,
+          "name": "세진중공업",
+          "code": "075580",
+          "weight": 0.25
+        },
+        {
+          "rank": 14,
+          "name": "현금성자산",
+          "code": "-",
+          "weight": 0.67
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "2소스 식별",
+          "AUM 상충 해소: 1조6,604억 확정(3소스 일치)",
+          "T0 운용사 PDF API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론 원문)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=13",
+          "주식 13종=TOP3+ 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 3
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.soletf.com/ko/fund/etf/211028",
+          "tier": "T0"
+        },
+        {
+          "field": "identity",
+          "url": "https://comp.wisereport.co.kr/company/c1010001.aspx?cmp_cd=466920",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide_Shipbuilding_TOP3_Plus_Index_Methodology_Book_(20250909)_v1.4.pdf",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.soletf.com/api/etf/pds/pdf/211028",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "494670",
+      "name": "TIGER 조선TOP10",
+      "ticker": "494670",
+      "issuer": "미래에셋 TIGER",
+      "theme": "조선",
+      "underlying_index": "iSelect 조선TOP10 지수(PR)",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 10,
+      "aum_krw_eok": 6353,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 2회 (6월·12월)",
+        "months": [
+          6,
+          12
+        ],
+        "next_date_est": "2026-12-11",
+        "next_date_confidence": "Med",
+        "rule": "6·12월 동시만기일 D+1 실시(삼성증권 일정표). 25% cap(투자설명서 상한 존재 명시). '26/6/9 HD현대중공업 29% 초과 관측.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "한화오션",
+          "code": "042660",
+          "weight": 24.84
+        },
+        {
+          "rank": 2,
+          "name": "HD현대중공업",
+          "code": "329180",
+          "weight": 23.98
+        },
+        {
+          "rank": 3,
+          "name": "HD한국조선해양",
+          "code": "009540",
+          "weight": 19.29
+        },
+        {
+          "rank": 4,
+          "name": "삼성중공업",
+          "code": "010140",
+          "weight": 15.68
+        },
+        {
+          "rank": 5,
+          "name": "HD현대마린솔루션",
+          "code": "443060",
+          "weight": 7.39
+        },
+        {
+          "rank": 6,
+          "name": "한화엔진",
+          "code": "082740",
+          "weight": 3.33
+        },
+        {
+          "rank": 7,
+          "name": "HD현대마린엔진",
+          "code": "071970",
+          "weight": 1.7
+        },
+        {
+          "rank": 8,
+          "name": "대한조선",
+          "code": "439260",
+          "weight": 1.52
+        },
+        {
+          "rank": 9,
+          "name": "한국카본",
+          "code": "017960",
+          "weight": 1.02
+        },
+        {
+          "rank": 10,
+          "name": "세진중공업",
+          "code": "075580",
+          "weight": 0.58
+        },
+        {
+          "rank": 11,
+          "name": "원화현금",
+          "code": "-",
+          "weight": 0.65
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T1 투자설명서+T2 교차)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10",
+          "종목코드 개별 대조(네이버)",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7494670003",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://m.stock.naver.com/api/stock/494670/etfAnalysis",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance",
+          "url": "http://investments.miraeasset.com/tigeretf/upload/etf/20260528035939038471.pdf",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "0115D0",
+      "name": "KODEX 조선TOP10",
+      "ticker": "0115D0",
+      "issuer": "삼성 KODEX",
+      "theme": "조선",
+      "underlying_index": "KRX K조선TOP10 지수(PR)",
+      "index_provider": "KRX",
+      "constituent_count": 10,
+      "aum_krw_eok": 2107,
+      "aum_asof": "2026-05-04",
+      "rebalance": {
+        "frequency_label": "연 4회 분기 (실시월 미확인)",
+        "months": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "next_date_est": "2026-09-14",
+        "next_date_confidence": "Low",
+        "rule": "상위 4종목 시총비례 합 85% 한도(종목 최대 22%) + 하위 6종목 테마적합도 15%. AI 키워드 스코어 기반.",
+        "confidence": "Low"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "HD한국조선해양",
+          "code": "009540",
+          "weight": 22.88
+        },
+        {
+          "rank": 2,
+          "name": "HD현대중공업",
+          "code": "329180",
+          "weight": 21.99
+        },
+        {
+          "rank": 3,
+          "name": "한화오션",
+          "code": "042660",
+          "weight": 21.53
+        },
+        {
+          "rank": 4,
+          "name": "삼성중공업",
+          "code": "010140",
+          "weight": 18.7
+        },
+        {
+          "rank": 5,
+          "name": "한화엔진",
+          "code": "082740",
+          "weight": 5.56
+        },
+        {
+          "rank": 6,
+          "name": "HD현대마린엔진",
+          "code": "071970",
+          "weight": 4.0
+        },
+        {
+          "rank": 7,
+          "name": "HJ중공업",
+          "code": "097230",
+          "weight": 2.73
+        },
+        {
+          "rank": 8,
+          "name": "대한조선",
+          "code": "439260",
+          "weight": 1.56
+        },
+        {
+          "rank": 9,
+          "name": "HD현대마린솔루션",
+          "code": "443060",
+          "weight": 0.55
+        },
+        {
+          "rank": 10,
+          "name": "한국카본",
+          "code": "017960",
+          "weight": 0.5
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "KRX 지수(공신력 높음)",
+          "T0 공식 PDF API",
+          "구성종목 as_of 2026-07-03",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [
+          "리밸일정 미확보",
+          "산출기관 상충: KRX 표기 vs Akros 산출 보도 — 재확인 필요",
+          "실시일 규칙 미확인(분기 가정)"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFT1",
+          "tier": "T0"
+        },
+        {
+          "field": "snapshot",
+          "url": "https://wcomp.fnguide.com/etp/etfSnapshot?cmp_cd=0115D0",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://www.smarttoday.co.kr/ko-kr/articles/94455",
+          "tier": "T2"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETFT1.do?gijunYMD=2026.07.03",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "0080G0",
+      "name": "KODEX K방산TOP10",
+      "ticker": "0080G0",
+      "issuer": "삼성 KODEX",
+      "theme": "방산",
+      "underlying_index": "iSelect K방산TOP10 지수(PR)",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 10,
+      "aum_krw_eok": 2200,
+      "aum_asof": "2025-09-30",
+      "rebalance": {
+        "frequency_label": "연 2회 (6월·12월)",
+        "months": [
+          6,
+          12
+        ],
+        "next_date_est": "2026-12-14",
+        "next_date_confidence": "Low",
+        "rule": "전월말 기준 심사(시총 1,000억↑·거래대금 10억↑). 6·12월 옵션만기 익주 첫 영업일(하나증권; D+1 해석 시 12-11). 20% cap, 수출·방산매출 20%↑ 기업 유동시총 50% 가산.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "한화에어로스페이스",
+          "code": "012450",
+          "weight": 21.71
+        },
+        {
+          "rank": 2,
+          "name": "한국항공우주",
+          "code": "047810",
+          "weight": 21.41
+        },
+        {
+          "rank": 3,
+          "name": "현대로템",
+          "code": "064350",
+          "weight": 20.63
+        },
+        {
+          "rank": 4,
+          "name": "LIG디펜스앤에어로스페이스",
+          "code": "079550",
+          "weight": 18.46
+        },
+        {
+          "rank": 5,
+          "name": "한화시스템",
+          "code": "272210",
+          "weight": 11.32
+        },
+        {
+          "rank": 6,
+          "name": "풍산",
+          "code": "103140",
+          "weight": 3.83
+        },
+        {
+          "rank": 7,
+          "name": "인텔리안테크",
+          "code": "189300",
+          "weight": 0.95
+        },
+        {
+          "rank": 8,
+          "name": "아이쓰리시스템",
+          "code": "214430",
+          "weight": 0.77
+        },
+        {
+          "rank": 9,
+          "name": "엠앤씨솔루션",
+          "code": "484870",
+          "weight": 0.65
+        },
+        {
+          "rank": 10,
+          "name": "스피어",
+          "code": "347700",
+          "weight": 0.26
+        }
+      ],
+      "confidence": "Med",
+      "data_quality": {
+        "invariants_passed": [
+          "T0 공식 PDF API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(주기 2소스)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [
+          "시행일 상충(익주 첫 영업일 vs D+1) — 단일출처, 재확인",
+          "시행일 원문 미공개(12-11 vs 12-14 상충) — 12월 KIND 공시로 해소 예정"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFR8",
+          "tier": "T0"
+        },
+        {
+          "field": "holdings_pdf",
+          "url": "https://m.samsungfund.com/sheet/20251013/2ETFR8_20250930.pdf",
+          "tier": "T1"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETFR8.do?gijunYMD=2026.07.03",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://www.hanaw.com/download/research/FileServer/WEB/strategy/market/2025/07/13/New_K_ETF_250714_KODEX.pdf",
+          "tier": "T2"
+        }
+      ]
+    },
+    {
+      "id": "0100K0",
+      "name": "KODEX K방산TOP10 레버리지",
+      "ticker": "0100K0",
+      "issuer": "삼성 KODEX",
+      "theme": "방산",
+      "underlying_index": "iSelect K방산TOP10 지수(PR) ×2",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 10,
+      "aum_krw_eok": 499,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 2회 (6월·12월)",
+        "months": [
+          6,
+          12
+        ],
+        "next_date_est": "2026-12-14",
+        "next_date_confidence": "Low",
+        "rule": "기초지수(iSelect K방산TOP10) 정기변경 승계, 2배 레버리지.",
+        "confidence": "Med"
+      },
+      "constituents": [],
+      "confidence": "Med",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 확보(T1 네이버)",
+          "기초지수 동일(K방산TOP10)",
+          "리밸일정 확보(기초 승계)"
+        ],
+        "invariants_failed": [
+          "시행일 원문 미공개(12-11 vs 12-14 상충) — 12월 KIND 공시로 해소 예정"
+        ],
+        "corroborating_sources": 1
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.samsungfund.com/etf/insight/newsroom/view.do?seq=69815",
+          "tier": "T1"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/0100K0/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "ACE_K방산TOP5plus",
+      "name": "ACE K방산TOP5+",
+      "ticker": null,
+      "issuer": "한투 ACE",
+      "theme": "방산",
+      "underlying_index": "KRX K-AI 방산TOP5+ 지수",
+      "index_provider": "KRX",
+      "constituent_count": 10,
+      "aum_krw_eok": 200,
+      "aum_asof": "2026-07(상장예정)",
+      "rebalance": {
+        "frequency_label": "연 4회 분기 (추정)",
+        "months": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "next_date_est": "2026-09-14",
+        "next_date_confidence": "Low",
+        "rule": "'AI Defense' 키워드 점수 50% + 유동시총 50%. 키워드 상위 5종목 합계 80% 고정, 총 10종목. 유니버스: 시총≥2,000억·거래대금≥10억. 상장 전 — 구성종목·티커는 상장일 이후 확보.",
+        "confidence": "Low"
+      },
+      "constituents": [],
+      "confidence": "Low",
+      "data_quality": {
+        "invariants_passed": [
+          "미상장 확인(2026-07-07 상장예정, 07-05 기준 펀드목록 부재)"
+        ],
+        "invariants_failed": [
+          "상장 후 티커·구성종목 수집 필요(07-07 이후)"
+        ],
+        "corroborating_sources": 1
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.newspim.com/news/view/20260703000886",
+          "tier": "T2"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://www.newspim.com/news/view/20260703000886",
+          "tier": "T2"
+        },
+        {
+          "field": "listing_status",
+          "url": "https://papi.aceetf.co.kr/api/funds",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "434730",
+      "name": "HANARO 원자력iSelect",
+      "ticker": "434730",
+      "issuer": "NH-Amundi",
+      "theme": "원자력",
+      "underlying_index": "iSelect 원자력 지수(PR)",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 15,
+      "aum_krw_eok": 7923,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 2회 (6월·12월)",
+        "months": [
+          6,
+          12
+        ],
+        "next_date_est": "2026-12-16",
+        "next_date_confidence": "High",
+        "rule": "시총 1,000억↑·60일 평균 거래대금 10억↑, AI 키워드 상위 40 중 시총 상위 15종목. 6·12월 만기일 D+4 실시. 25% cap + 수시(월말·만기일 모두 30% 초과 시 25% 하향).",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "두산에너빌리티",
+          "code": "034020",
+          "weight": 25.25
+        },
+        {
+          "rank": 2,
+          "name": "HD현대일렉트릭",
+          "code": "267260",
+          "weight": 17.44
+        },
+        {
+          "rank": 3,
+          "name": "LS ELECTRIC",
+          "code": "010120",
+          "weight": 14.27
+        },
+        {
+          "rank": 4,
+          "name": "효성중공업",
+          "code": "298040",
+          "weight": 14.1
+        },
+        {
+          "rank": 5,
+          "name": "한국전력",
+          "code": "015760",
+          "weight": 9.58
+        },
+        {
+          "rank": 6,
+          "name": "현대건설",
+          "code": "000720",
+          "weight": 6.89
+        },
+        {
+          "rank": 7,
+          "name": "대우건설",
+          "code": "047040",
+          "weight": 2.95
+        },
+        {
+          "rank": 8,
+          "name": "산일전기",
+          "code": "062040",
+          "weight": 2.37
+        },
+        {
+          "rank": 9,
+          "name": "한전기술",
+          "code": "052690",
+          "weight": 1.55
+        },
+        {
+          "rank": 10,
+          "name": "우리기술",
+          "code": "032820",
+          "weight": 1.49
+        },
+        {
+          "rank": 11,
+          "name": "일진전기",
+          "code": "103590",
+          "weight": 1.46
+        },
+        {
+          "rank": 12,
+          "name": "비에이치아이",
+          "code": "083650",
+          "weight": 0.81
+        },
+        {
+          "rank": 13,
+          "name": "한전KPS",
+          "code": "051600",
+          "weight": 0.79
+        },
+        {
+          "rank": 14,
+          "name": "성광벤드",
+          "code": "014620",
+          "weight": 0.38
+        },
+        {
+          "rank": 15,
+          "name": "한전산업",
+          "code": "130660",
+          "weight": 0.21
+        },
+        {
+          "rank": 16,
+          "name": "원화예금",
+          "code": "-",
+          "weight": 0.45
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 갱신 7,923억(07-02)",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T1 간이투자설명서)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=15(리모델링 반영)",
+          "주식 15종=리모델링 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.hanaroetf.com/investment/insight/gdpIBR8B35AXrcuT",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://www.hanaroetf.com/_upload/public/fund-new/5012FAEBEF0D4FB7/P1MyEjjAwk7cRYeL.pdf",
+          "tier": "T1"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.hanaroetf.com/fund/5012FAEBEF0D4FB7",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "364970",
+      "name": "TIGER 바이오TOP10",
+      "ticker": "364970",
+      "issuer": "미래에셋 TIGER",
+      "theme": "바이오",
+      "underlying_index": "KRX 바이오 TOP10 지수 (구 바이오 K-뉴딜)",
+      "index_provider": "KRX",
+      "constituent_count": 10,
+      "aum_krw_eok": 2844,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 2회 (3월·9월)",
+        "months": [
+          3,
+          9
+        ],
+        "next_date_est": "2026-09-11",
+        "next_date_confidence": "Med",
+        "rule": "상위 3종목 각 25% 동일가중(합 75%) + 나머지 7종목 유동시총가중 합 25%, CAP 25%. 3·9월 선물옵션 만기일 다음 매매거래일(D+1) 실시.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "셀트리온",
+          "code": "068270",
+          "weight": 27.06
+        },
+        {
+          "rank": 2,
+          "name": "알테오젠",
+          "code": "196170",
+          "weight": 26.55
+        },
+        {
+          "rank": 3,
+          "name": "삼성바이오로직스",
+          "code": "207940",
+          "weight": 25.34
+        },
+        {
+          "rank": 4,
+          "name": "HLB",
+          "code": "028300",
+          "weight": 4.58
+        },
+        {
+          "rank": 5,
+          "name": "유한양행",
+          "code": "000100",
+          "weight": 3.39
+        },
+        {
+          "rank": 6,
+          "name": "에이비엘바이오",
+          "code": "298380",
+          "weight": 3.21
+        },
+        {
+          "rank": 7,
+          "name": "펩트론",
+          "code": "087010",
+          "weight": 3.12
+        },
+        {
+          "rank": 8,
+          "name": "리가켐바이오",
+          "code": "141080",
+          "weight": 2.76
+        },
+        {
+          "rank": 9,
+          "name": "SK바이오팜",
+          "code": "326030",
+          "weight": 1.92
+        },
+        {
+          "rank": 10,
+          "name": "삼성에피스홀딩스",
+          "code": "0126Z0",
+          "weight": 1.86
+        },
+        {
+          "rank": 11,
+          "name": "원화현금",
+          "code": "-",
+          "weight": 0.22
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "KRX 지수",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(패밀리 규칙)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10",
+          "종목코드 개별 대조(네이버)",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [
+          "심사기준일 규칙 미확인(KRX 방법론 원문 필요)"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://www.funetf.co.kr/product/etf/view/KR7364970004",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://data.krx.co.kr/contents/MDC/COMS/board/MDCCOMS010_S1.cmd?boardId=MDCINFO005",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://m.stock.naver.com/api/stock/364970/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "0000Z0",
+      "name": "RISE 바이오TOP10액티브",
+      "ticker": "0000Z0",
+      "issuer": "KB RISE",
+      "theme": "바이오",
+      "underlying_index": "KRX 바이오 TOP10 지수 (액티브)",
+      "index_provider": "KRX",
+      "constituent_count": 23,
+      "aum_krw_eok": 632,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "액티브 (수시 리밸)",
+        "months": [],
+        "next_date_est": null,
+        "next_date_confidence": "Low",
+        "rule": "액티브 운용 — 벤치마크(KRX 바이오 TOP10)와 무관하게 재량 리밸런싱. 정기변경일 개념 없음.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "올릭스",
+          "code": "226950",
+          "weight": 13.29
+        },
+        {
+          "rank": 2,
+          "name": "리가켐바이오",
+          "code": "141080",
+          "weight": 10.35
+        },
+        {
+          "rank": 3,
+          "name": "알테오젠",
+          "code": "196170",
+          "weight": 10.12
+        },
+        {
+          "rank": 4,
+          "name": "에이비엘바이오",
+          "code": "298380",
+          "weight": 7.28
+        },
+        {
+          "rank": 5,
+          "name": "디앤디파마텍",
+          "code": "347850",
+          "weight": 6.33
+        },
+        {
+          "rank": 6,
+          "name": "셀트리온",
+          "code": "068270",
+          "weight": 4.92
+        },
+        {
+          "rank": 7,
+          "name": "한미약품",
+          "code": "128940",
+          "weight": 4.72
+        },
+        {
+          "rank": 8,
+          "name": "한올바이오파마",
+          "code": "009420",
+          "weight": 4.68
+        },
+        {
+          "rank": 9,
+          "name": "에스티팜",
+          "code": "237690",
+          "weight": 4.38
+        },
+        {
+          "rank": 10,
+          "name": "휴젤",
+          "code": "145020",
+          "weight": 3.96
+        },
+        {
+          "rank": 11,
+          "name": "코오롱티슈진",
+          "code": "950160",
+          "weight": 3.15
+        },
+        {
+          "rank": 12,
+          "name": "오스코텍",
+          "code": "039200",
+          "weight": 3.05
+        },
+        {
+          "rank": 13,
+          "name": "에이프릴바이오",
+          "code": "397030",
+          "weight": 2.98
+        },
+        {
+          "rank": 14,
+          "name": "알지노믹스",
+          "code": "476830",
+          "weight": 2.95
+        },
+        {
+          "rank": 15,
+          "name": "한스바이오메드",
+          "code": "042520",
+          "weight": 2.59
+        },
+        {
+          "rank": 16,
+          "name": "앱클론",
+          "code": "174900",
+          "weight": 2.16
+        },
+        {
+          "rank": 17,
+          "name": "리브스메드",
+          "code": "491000",
+          "weight": 2.16
+        },
+        {
+          "rank": 18,
+          "name": "파마리서치",
+          "code": "214450",
+          "weight": 2.12
+        },
+        {
+          "rank": 19,
+          "name": "보로노이",
+          "code": "310210",
+          "weight": 2.05
+        },
+        {
+          "rank": 20,
+          "name": "펩트론",
+          "code": "087010",
+          "weight": 2.03
+        },
+        {
+          "rank": 21,
+          "name": "리센스메디컬",
+          "code": "394420",
+          "weight": 1.82
+        },
+        {
+          "rank": 22,
+          "name": "큐라클",
+          "code": "365270",
+          "weight": 1.31
+        },
+        {
+          "rank": 23,
+          "name": "지아이이노베이션",
+          "code": "358570",
+          "weight": 1.17
+        },
+        {
+          "rank": 24,
+          "name": "원화예금",
+          "code": "-",
+          "weight": 0.44
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "구성종목 as_of 2026-07-05",
+          "비중합=100.0%±0.5",
+          "액티브 특성 확인(정기변경 비적용)",
+          "티커 0000Z0 확정(네이버 API 정상응답)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44I0",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44I0",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "365000",
+      "name": "TIGER 인터넷TOP10",
+      "ticker": "365000",
+      "issuer": "미래에셋 TIGER",
+      "theme": "인터넷",
+      "underlying_index": "KRX 인터넷 TOP10 지수 (구 인터넷 K-뉴딜)",
+      "index_provider": "KRX",
+      "constituent_count": 10,
+      "aum_krw_eok": 387,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 2회 (3월·9월)",
+        "months": [
+          3,
+          9
+        ],
+        "next_date_est": "2026-09-11",
+        "next_date_confidence": "Med",
+        "rule": "상위 3종목 각 25% 동일가중(합 75%) + 나머지 7종목 유동시총가중 합 25%, CAP 25%. 3·9월 선물옵션 만기일 다음 매매거래일(D+1) 실시.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "카카오",
+          "code": "035720",
+          "weight": 27.47
+        },
+        {
+          "rank": 2,
+          "name": "NAVER",
+          "code": "035420",
+          "weight": 26.59
+        },
+        {
+          "rank": 3,
+          "name": "서진시스템",
+          "code": "178320",
+          "weight": 20.79
+        },
+        {
+          "rank": 4,
+          "name": "인텔리안테크",
+          "code": "189300",
+          "weight": 5.35
+        },
+        {
+          "rank": 5,
+          "name": "케이엠더블유",
+          "code": "032500",
+          "weight": 4.57
+        },
+        {
+          "rank": 6,
+          "name": "SOOP",
+          "code": "067160",
+          "weight": 3.44
+        },
+        {
+          "rank": 7,
+          "name": "노타",
+          "code": "486990",
+          "weight": 3.32
+        },
+        {
+          "rank": 8,
+          "name": "카페24",
+          "code": "042000",
+          "weight": 3.02
+        },
+        {
+          "rank": 9,
+          "name": "안랩",
+          "code": "053800",
+          "weight": 2.51
+        },
+        {
+          "rank": 10,
+          "name": "디어유",
+          "code": "376300",
+          "weight": 2.38
+        },
+        {
+          "rank": 11,
+          "name": "원화현금",
+          "code": "-",
+          "weight": 0.56
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "KRX 지수",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(패밀리 규칙)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10",
+          "종목코드 개별 대조(네이버)",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [
+          "심사기준일 규칙 미확인"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://www.funetf.co.kr/product/etf/view/KR7365000009",
+          "tier": "T1"
+        },
+        {
+          "field": "constituents",
+          "url": "https://m.stock.naver.com/api/stock/365000/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "364990",
+      "name": "TIGER 게임TOP10",
+      "ticker": "364990",
+      "issuer": "미래에셋 TIGER",
+      "theme": "게임",
+      "underlying_index": "KRX 게임 TOP10 지수 (구 게임 K-뉴딜)",
+      "index_provider": "KRX",
+      "constituent_count": 10,
+      "aum_krw_eok": 246,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 2회 (3월·9월)",
+        "months": [
+          3,
+          9
+        ],
+        "next_date_est": "2026-09-11",
+        "next_date_confidence": "Med",
+        "rule": "상위 3종목 각 25% 동일가중(합 75%) + 나머지 7종목 유동시총가중 합 25%, CAP 25%. 3·9월 선물옵션 만기일 다음 매매거래일(D+1) 실시.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "엔씨소프트",
+          "code": "036570",
+          "weight": 32.35
+        },
+        {
+          "rank": 2,
+          "name": "크래프톤",
+          "code": "259960",
+          "weight": 28.54
+        },
+        {
+          "rank": 3,
+          "name": "넷마블",
+          "code": "251270",
+          "weight": 18.37
+        },
+        {
+          "rank": 4,
+          "name": "펄어비스",
+          "code": "263750",
+          "weight": 6.72
+        },
+        {
+          "rank": 5,
+          "name": "더블유게임즈",
+          "code": "192080",
+          "weight": 3.78
+        },
+        {
+          "rank": 6,
+          "name": "시프트업",
+          "code": "462870",
+          "weight": 2.55
+        },
+        {
+          "rank": 7,
+          "name": "NHN",
+          "code": "181710",
+          "weight": 2.39
+        },
+        {
+          "rank": 8,
+          "name": "위메이드",
+          "code": "112040",
+          "weight": 2.04
+        },
+        {
+          "rank": 9,
+          "name": "카카오게임즈",
+          "code": "293490",
+          "weight": 1.69
+        },
+        {
+          "rank": 10,
+          "name": "넥슨게임즈",
+          "code": "225570",
+          "weight": 1.12
+        },
+        {
+          "rank": 11,
+          "name": "원화현금",
+          "code": "-",
+          "weight": 0.43
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "KRX 지수",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(패밀리 규칙)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10",
+          "종목코드 개별 대조(네이버)",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [
+          "심사기준일 규칙 미확인"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://www.funetf.co.kr/product/etf/view/KR7364990002",
+          "tier": "T1"
+        },
+        {
+          "field": "constituents",
+          "url": "https://m.stock.naver.com/api/stock/364990/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "0114X0",
+      "name": "RISE 글로벌게임테크TOP3Plus",
+      "ticker": "0114X0",
+      "issuer": "KB RISE",
+      "theme": "게임",
+      "underlying_index": "Solactive-KEDI 글로벌 게임 테크 TOP3 플러스 지수",
+      "index_provider": "Solactive(KEDI)",
+      "constituent_count": 10,
+      "aum_krw_eok": 62,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 4회 (2·5·8·11월 첫째 수요일)",
+        "months": [
+          2,
+          5,
+          8,
+          11
+        ],
+        "next_date_est": "2026-08-05",
+        "next_date_confidence": "High",
+        "rule": "Selection Day=리밸 20영업일 전(8월분≈7/8). Rebalance Day=해당월 첫째 수요일 장마감(효력 8/6 시초가). 업종별 TOP3 각 20% 고정(60%) + 7종목 동일가중 ~5.71%.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "MICROSOFT CORP",
+          "code": "MSFT",
+          "weight": 19.51
+        },
+        {
+          "rank": 2,
+          "name": "Sony Group",
+          "code": "6758.T",
+          "weight": 17.9
+        },
+        {
+          "rank": 3,
+          "name": "NINTENDO",
+          "code": "7974.T",
+          "weight": 15.21
+        },
+        {
+          "rank": 4,
+          "name": "AMD",
+          "code": "AMD",
+          "weight": 12.37
+        },
+        {
+          "rank": 5,
+          "name": "TAKE-TWO",
+          "code": "TTWO",
+          "weight": 6.84
+        },
+        {
+          "rank": 6,
+          "name": "NetEase",
+          "code": "9999.HK",
+          "weight": 6.18
+        },
+        {
+          "rank": 7,
+          "name": "NVIDIA",
+          "code": "NVDA",
+          "weight": 5.81
+        },
+        {
+          "rank": 8,
+          "name": "ROBLOX",
+          "code": "RBLX",
+          "weight": 5.68
+        },
+        {
+          "rank": 9,
+          "name": "ELECTRONIC ARTS",
+          "code": "EA",
+          "weight": 5.5
+        },
+        {
+          "rank": 10,
+          "name": "TENCENT",
+          "code": "0700.HK",
+          "weight": 4.57
+        },
+        {
+          "rank": 11,
+          "name": "현금성자산",
+          "code": "-",
+          "weight": 0.43
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "TOP3 합산 52.6% 규칙 일치",
+          "구성종목 as_of 2026-07-05",
+          "등급 재판정: AUM 상충 해소: 61.6억 2소스 일치(구 616억은 자릿수 오류 판정)",
+          "리밸일정 확보(T0 가이드라인)",
+          "비중합=100.0%±0.5",
+          "종목수=10"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44J5",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44J5",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://www.solactive.com/downloads/Guideline-Solactive-SOLGAM3.pdf",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "466940",
+      "name": "TIGER 은행고배당플러스TOP10",
+      "ticker": "466940",
+      "issuer": "미래에셋 TIGER",
+      "theme": "금융",
+      "underlying_index": "FnGuide 은행고배당플러스TOP10 지수",
+      "index_provider": "FnGuide",
+      "constituent_count": 10,
+      "aum_krw_eok": 6923,
+      "aum_asof": "2026",
+      "rebalance": {
+        "frequency_label": "연 2회 (6월·12월)",
+        "months": [
+          6,
+          12
+        ],
+        "next_date_est": "2026-12-14",
+        "next_date_confidence": "High",
+        "rule": "종목선정 5·11월말 / 비중확정 만기일 종가. 6·12월 만기일 D+2 실시. 현금배당총액 가중, 은행 15%·보험증권 5% cap.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "KB금융",
+          "code": "105560",
+          "weight": 15.74
+        },
+        {
+          "rank": 2,
+          "name": "신한지주",
+          "code": "055550",
+          "weight": 15.53
+        },
+        {
+          "rank": 3,
+          "name": "하나금융지주",
+          "code": "086790",
+          "weight": 15.34
+        },
+        {
+          "rank": 4,
+          "name": "우리금융지주",
+          "code": "316140",
+          "weight": 14.3
+        },
+        {
+          "rank": 5,
+          "name": "기업은행",
+          "code": "024110",
+          "weight": 14.26
+        },
+        {
+          "rank": 6,
+          "name": "BNK금융지주",
+          "code": "138930",
+          "weight": 6.47
+        },
+        {
+          "rank": 7,
+          "name": "JB금융지주",
+          "code": "175330",
+          "weight": 5.42
+        },
+        {
+          "rank": 8,
+          "name": "한국금융지주",
+          "code": "071050",
+          "weight": 4.91
+        },
+        {
+          "rank": 9,
+          "name": "삼성화재",
+          "code": "000810",
+          "weight": 4.49
+        },
+        {
+          "rank": 10,
+          "name": "iM금융지주",
+          "code": "139130",
+          "weight": 2.75
+        },
+        {
+          "rank": 11,
+          "name": "원화현금",
+          "code": "-",
+          "weight": 0.78
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "FnGuide 지수",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론 원문)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10",
+          "종목코드 개별 대조(네이버)",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7466940004",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://m.stock.naver.com/api/stock/466940/etfAnalysis",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide_Bank_High_Dividend_Plus_TOP_10_Index_Methodology_Book_(20230825)_v1.2.pdf",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "0177X0",
+      "name": "ACE K휴머노이드로봇산업TOP2+",
+      "ticker": "0177X0",
+      "issuer": "한투 ACE",
+      "theme": "로봇",
+      "underlying_index": "Akros K-휴머노이드로봇 TOP2+ 지수",
+      "index_provider": "Akros(KIS계열)",
+      "constituent_count": 15,
+      "aum_krw_eok": 1024,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 4회 (3·6·9·12월 말 D+3)",
+        "months": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "next_date_est": "2026-10-06",
+        "next_date_confidence": "High",
+        "rule": "비중결정일=분기 마지막 영업일, D+3 수행. Top2 각 20% 고정 + 13종목 점수비례(최대 16%·최소 1%). 수시 30% 3일 연속 초과 시 25% 하향.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "현대차",
+          "code": "005380",
+          "weight": 22.88
+        },
+        {
+          "rank": 2,
+          "name": "로보티즈",
+          "code": "108490",
+          "weight": 19.88
+        },
+        {
+          "rank": 3,
+          "name": "레인보우로보틱스",
+          "code": "277810",
+          "weight": 12.52
+        },
+        {
+          "rank": 4,
+          "name": "에스피지",
+          "code": "058610",
+          "weight": 11.45
+        },
+        {
+          "rank": 5,
+          "name": "현대오토에버",
+          "code": "307950",
+          "weight": 7.38
+        },
+        {
+          "rank": 6,
+          "name": "현대모비스",
+          "code": "012330",
+          "weight": 7.23
+        },
+        {
+          "rank": 7,
+          "name": "두산로보틱스",
+          "code": "454910",
+          "weight": 4.38
+        },
+        {
+          "rank": 8,
+          "name": "삼현",
+          "code": "437730",
+          "weight": 4.29
+        },
+        {
+          "rank": 9,
+          "name": "뉴로메카",
+          "code": "348340",
+          "weight": 2.73
+        },
+        {
+          "rank": 10,
+          "name": "유일로보틱스",
+          "code": "388720",
+          "weight": 2.16
+        },
+        {
+          "rank": 11,
+          "name": "에스비비테크",
+          "code": "389500",
+          "weight": 1.71
+        },
+        {
+          "rank": 12,
+          "name": "클로봇",
+          "code": "466100",
+          "weight": 1.21
+        },
+        {
+          "rank": 13,
+          "name": "HL만도",
+          "code": "204320",
+          "weight": 1.04
+        },
+        {
+          "rank": 14,
+          "name": "한국피아이엠",
+          "code": "448900",
+          "weight": 0.92
+        },
+        {
+          "rank": 15,
+          "name": "씨메스로보틱스",
+          "code": "475400",
+          "weight": 0.21
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "2소스 식별",
+          "T0 운용사 엑셀 API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=15",
+          "주식 15종=TOP2+ 규칙 일치"
+        ],
+        "invariants_failed": [
+          "AUM 상충: T0 1,024억(07-02) vs 기사 5,830억(05-08) — T0 채택, 기사값 폐기"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.aceetf.co.kr/fund/K55101EU0214",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://www.akrostec.com/indices/AKHMR",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://papi.aceetf.co.kr/api/funds/K55101EU0214/pdf/down",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "445290",
+      "name": "KODEX 로봇액티브",
+      "ticker": "445290",
+      "issuer": "삼성 KODEX",
+      "theme": "로봇",
+      "underlying_index": "iSelect K-로봇테마 지수 (액티브)",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 32,
+      "aum_krw_eok": 5273,
+      "aum_asof": "2026-01",
+      "rebalance": {
+        "frequency_label": "액티브 (벤치마크: 연 2회 6·12월)",
+        "months": [],
+        "next_date_est": null,
+        "next_date_confidence": "Low",
+        "rule": "ETF는 액티브 수시 리밸. 벤치마크 iSelect K-로봇테마는 6·12월 만기 D+2(다음 2026-12-14), 종목별 최대 8% cap.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 9.88
+        },
+        {
+          "rank": 2,
+          "name": "로보티즈",
+          "code": "108490",
+          "weight": 8.15
+        },
+        {
+          "rank": 3,
+          "name": "현대모비스",
+          "code": "012330",
+          "weight": 7.78
+        },
+        {
+          "rank": 4,
+          "name": "LG전자",
+          "code": "066570",
+          "weight": 7.26
+        },
+        {
+          "rank": 5,
+          "name": "레인보우로보틱스",
+          "code": "277810",
+          "weight": 7.24
+        },
+        {
+          "rank": 6,
+          "name": "현대오토에버",
+          "code": "307950",
+          "weight": 6.81
+        },
+        {
+          "rank": 7,
+          "name": "두산로보틱스",
+          "code": "454910",
+          "weight": 5.85
+        },
+        {
+          "rank": 8,
+          "name": "현대차",
+          "code": "005380",
+          "weight": 5.84
+        },
+        {
+          "rank": 9,
+          "name": "NAVER",
+          "code": "035420",
+          "weight": 5.23
+        },
+        {
+          "rank": 10,
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 4.88
+        },
+        {
+          "rank": 11,
+          "name": "LG이노텍",
+          "code": "011070",
+          "weight": 3.84
+        },
+        {
+          "rank": 12,
+          "name": "삼성에스디에스",
+          "code": "018260",
+          "weight": 3.4
+        },
+        {
+          "rank": 13,
+          "name": "에스피지",
+          "code": "058610",
+          "weight": 3.18
+        },
+        {
+          "rank": 14,
+          "name": "뉴로메카",
+          "code": "348340",
+          "weight": 2.78
+        },
+        {
+          "rank": 15,
+          "name": "HD현대",
+          "code": "267250",
+          "weight": 2.54
+        },
+        {
+          "rank": 16,
+          "name": "KT",
+          "code": "030200",
+          "weight": 1.87
+        },
+        {
+          "rank": 17,
+          "name": "유진로봇",
+          "code": "056080",
+          "weight": 1.67
+        },
+        {
+          "rank": 18,
+          "name": "클로봇",
+          "code": "466100",
+          "weight": 1.48
+        },
+        {
+          "rank": 19,
+          "name": "유일로보틱스",
+          "code": "388720",
+          "weight": 1.47
+        },
+        {
+          "rank": 20,
+          "name": "현대로템",
+          "code": "064350",
+          "weight": 1.18
+        },
+        {
+          "rank": 21,
+          "name": "원익홀딩스",
+          "code": "030530",
+          "weight": 1.07
+        },
+        {
+          "rank": 22,
+          "name": "삼현",
+          "code": "437730",
+          "weight": 1.05
+        },
+        {
+          "rank": 23,
+          "name": "큐렉소",
+          "code": "060280",
+          "weight": 1.04
+        },
+        {
+          "rank": 24,
+          "name": "고영",
+          "code": "098460",
+          "weight": 1.03
+        },
+        {
+          "rank": 25,
+          "name": "에스비비테크",
+          "code": "389500",
+          "weight": 0.81
+        },
+        {
+          "rank": 26,
+          "name": "제이브이엠",
+          "code": "054950",
+          "weight": 0.72
+        },
+        {
+          "rank": 27,
+          "name": "카카오",
+          "code": "035720",
+          "weight": 0.54
+        },
+        {
+          "rank": 28,
+          "name": "엔젤로보틱스",
+          "code": "455900",
+          "weight": 0.36
+        },
+        {
+          "rank": 29,
+          "name": "하이젠알앤엠",
+          "code": "160190",
+          "weight": 0.31
+        },
+        {
+          "rank": 30,
+          "name": "비에이치",
+          "code": "090460",
+          "weight": 0.26
+        },
+        {
+          "rank": 31,
+          "name": "에스오에스랩",
+          "code": "464080",
+          "weight": 0.26
+        },
+        {
+          "rank": 32,
+          "name": "나우로보틱스",
+          "code": "459510",
+          "weight": 0.23
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "T0 공식 PDF API",
+          "구성종목 as_of 2026-07-03",
+          "비중합 검증 통과(±0.5%)",
+          "액티브 전체 32종 확보",
+          "액티브 특성 확인(정기변경 비적용)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFH5",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETFH5.do?gijunYMD=2026.07.03",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://m.samsungfund.com/upload/invest/2ETFH5-A.pdf",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "0172Y0",
+      "name": "ACE K수출핵심TOP10산업액티브",
+      "ticker": "0172Y0",
+      "issuer": "한투 ACE",
+      "theme": "수출복합",
+      "underlying_index": "10개 산업 TOP2 바스켓 (액티브)",
+      "index_provider": "KIS/자체",
+      "constituent_count": 16,
+      "aum_krw_eok": 101,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "액티브 (수시 리밸)",
+        "months": [],
+        "next_date_est": null,
+        "next_date_confidence": "Low",
+        "rule": "액티브 운용 — 산업별 TOP2 바스켓을 재량 리밸런싱. 정기변경일 개념 없음.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 20.51
+        },
+        {
+          "rank": 2,
+          "name": "삼성물산",
+          "code": "028260",
+          "weight": 19.9
+        },
+        {
+          "rank": 3,
+          "name": "파마리서치",
+          "code": "214450",
+          "weight": 6.18
+        },
+        {
+          "rank": 4,
+          "name": "한화에어로스페이스",
+          "code": "012450",
+          "weight": 5.37
+        },
+        {
+          "rank": 5,
+          "name": "LS ELECTRIC",
+          "code": "010120",
+          "weight": 4.78
+        },
+        {
+          "rank": 6,
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 4.64
+        },
+        {
+          "rank": 7,
+          "name": "기아",
+          "code": "000270",
+          "weight": 4.5
+        },
+        {
+          "rank": 8,
+          "name": "두산에너빌리티",
+          "code": "034020",
+          "weight": 4.45
+        },
+        {
+          "rank": 9,
+          "name": "LG에너지솔루션",
+          "code": "373220",
+          "weight": 4.36
+        },
+        {
+          "rank": 10,
+          "name": "HD현대중공업",
+          "code": "329180",
+          "weight": 4.32
+        },
+        {
+          "rank": 11,
+          "name": "HD현대일렉트릭",
+          "code": "267260",
+          "weight": 4.29
+        },
+        {
+          "rank": 12,
+          "name": "현대건설",
+          "code": "000720",
+          "weight": 4.24
+        },
+        {
+          "rank": 13,
+          "name": "삼성바이오로직스",
+          "code": "207940",
+          "weight": 4.06
+        },
+        {
+          "rank": 14,
+          "name": "현대차",
+          "code": "005380",
+          "weight": 3.9
+        },
+        {
+          "rank": 15,
+          "name": "SK스퀘어",
+          "code": "402340",
+          "weight": 3.82
+        },
+        {
+          "rank": 16,
+          "name": "삼양식품",
+          "code": "003230",
+          "weight": 0.67
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "T0 운용사 엑셀 API",
+          "구성종목 as_of 2026-07-03",
+          "비중합 검증 통과(±0.5%)",
+          "액티브 16종 확보",
+          "액티브 특성 확인(정기변경 비적용)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.aceetf.co.kr/info/report/1347",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://papi.aceetf.co.kr/api/funds/K55101ES8039/pdf/down",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "364980",
+      "name": "TIGER 2차전지TOP10",
+      "ticker": "364980",
+      "issuer": "미래에셋 TIGER",
+      "theme": "2차전지",
+      "underlying_index": "KRX 2차전지 TOP10 지수 (구 2차전지 K-뉴딜)",
+      "index_provider": "KRX",
+      "constituent_count": 10,
+      "aum_krw_eok": 6257,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 2회 (3월·9월)",
+        "months": [
+          3,
+          9
+        ],
+        "next_date_est": "2026-09-11",
+        "next_date_confidence": "High",
+        "rule": "상위 3종목 각 25% 동일가중(합 75%) + 나머지 7종목 유동시총가중 합 25%, CAP 25%. 3·9월 선물옵션 만기일 다음 매매거래일(D+1) 실시.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "삼성SDI",
+          "code": "006400",
+          "weight": 30.34
+        },
+        {
+          "rank": 2,
+          "name": "LG에너지솔루션",
+          "code": "373220",
+          "weight": 25.54
+        },
+        {
+          "rank": 3,
+          "name": "POSCO홀딩스",
+          "code": "005490",
+          "weight": 23.6
+        },
+        {
+          "rank": 4,
+          "name": "LG화학",
+          "code": "051910",
+          "weight": 5.78
+        },
+        {
+          "rank": 5,
+          "name": "에코프로",
+          "code": "086520",
+          "weight": 3.73
+        },
+        {
+          "rank": 6,
+          "name": "SK이노베이션",
+          "code": "096770",
+          "weight": 3.06
+        },
+        {
+          "rank": 7,
+          "name": "에코프로비엠",
+          "code": "247540",
+          "weight": 2.89
+        },
+        {
+          "rank": 8,
+          "name": "포스코퓨처엠",
+          "code": "003670",
+          "weight": 2.53
+        },
+        {
+          "rank": 9,
+          "name": "엘앤에프",
+          "code": "066970",
+          "weight": 1.31
+        },
+        {
+          "rank": 10,
+          "name": "SKC",
+          "code": "011790",
+          "weight": 1.22
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "KRX 지수",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(3·9월 만기 D+1)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10",
+          "종목코드 개별 대조(네이버)",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://www.funetf.co.kr/product/etf/view/KR7364980003",
+          "tier": "T1"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://samsungpop.com/common.do?cmd=down&fileName=1040%2F2026061007190255K_02_02.pdf",
+          "tier": "T2"
+        },
+        {
+          "field": "constituents",
+          "url": "https://m.stock.naver.com/api/stock/364980/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "412570",
+      "name": "TIGER 2차전지TOP10레버리지",
+      "ticker": "412570",
+      "issuer": "미래에셋 TIGER",
+      "theme": "2차전지",
+      "underlying_index": "KRX 2차전지 TOP10 지수 (2X)",
+      "index_provider": "KRX",
+      "constituent_count": 10,
+      "aum_krw_eok": 1537,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 2회 (3월·9월)",
+        "months": [
+          3,
+          9
+        ],
+        "next_date_est": "2026-09-11",
+        "next_date_confidence": "High",
+        "rule": "기초지수(KRX 2차전지 TOP10) 정기변경 승계, 2배 레버리지. 상위 3종목 각 25% 동일가중(합 75%) + 나머지 7종목 유동시총가중 합 25%, CAP 25%. 3·9월 선물옵션 만기일 다음 매매거래일(D+1) 실시.",
+        "confidence": "High"
+      },
+      "constituents": [],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "구성종목: 기초지수(TIGER 2차전지TOP10) 바스켓 승계",
+          "리밸일정 확보(기초 승계)",
+          "종목수=10"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 1
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/index.do?ksdFund=KR7412570004",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://samsungpop.com/common.do?cmd=down&fileName=1040%2F2026061007190255K_02_02.pdf",
+          "tier": "T2"
+        }
+      ]
+    },
+    {
+      "id": "465330",
+      "name": "RISE 2차전지TOP10",
+      "ticker": "465330",
+      "issuer": "KB RISE",
+      "theme": "2차전지",
+      "underlying_index": "iSelect 2차전지 TOP10 지수",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 10,
+      "aum_krw_eok": 619,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 4회 (2·5·8·11월 말)",
+        "months": [
+          2,
+          5,
+          8,
+          11
+        ],
+        "next_date_est": "2026-09-01",
+        "next_date_confidence": "High",
+        "rule": "모지수 편입종목 중 유동시총 상위 10종목. 2/5/8/11월 마지막 영업일 이후 실시(만기일 비연동). cap 없음, 유동시총 가중.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "LG에너지솔루션",
+          "code": "373220",
+          "weight": 18.66
+        },
+        {
+          "rank": 2,
+          "name": "POSCO홀딩스",
+          "code": "005490",
+          "weight": 15.18
+        },
+        {
+          "rank": 3,
+          "name": "삼성SDI",
+          "code": "006400",
+          "weight": 15.05
+        },
+        {
+          "rank": 4,
+          "name": "에코프로",
+          "code": "086520",
+          "weight": 12.01
+        },
+        {
+          "rank": 5,
+          "name": "SK이노베이션",
+          "code": "096770",
+          "weight": 10.31
+        },
+        {
+          "rank": 6,
+          "name": "에코프로비엠",
+          "code": "247540",
+          "weight": 9.31
+        },
+        {
+          "rank": 7,
+          "name": "포스코퓨처엠",
+          "code": "003670",
+          "weight": 8.19
+        },
+        {
+          "rank": 8,
+          "name": "엘앤에프",
+          "code": "066970",
+          "weight": 4.3
+        },
+        {
+          "rank": 9,
+          "name": "SKC",
+          "code": "011790",
+          "weight": 3.46
+        },
+        {
+          "rank": 10,
+          "name": "에코프로머티",
+          "code": "450080",
+          "weight": 2.17
+        },
+        {
+          "rank": 11,
+          "name": "원화예금",
+          "code": "-",
+          "weight": 1.37
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "구성종목 as_of 2026-07-05",
+          "리밸일정 확보(T1 투자설명서)",
+          "만기일 비연동 확인",
+          "비중합=100.0%±0.5",
+          "종목수=10",
+          "주식 10종=TOP10 규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44f2",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44F2",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://www.riseetf.co.kr/upload/cdn/2026/01/29/2026012974aa31579731431.pdf",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "465350",
+      "name": "RISE 2차전지TOP10인버스(합성)",
+      "ticker": "465350",
+      "issuer": "KB RISE",
+      "theme": "2차전지",
+      "underlying_index": "iSelect 2차전지 TOP10 지수 (-1X)",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 10,
+      "aum_krw_eok": 420,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 4회 (2·5·8·11월 말)",
+        "months": [
+          2,
+          5,
+          8,
+          11
+        ],
+        "next_date_est": "2026-09-01",
+        "next_date_confidence": "High",
+        "rule": "기초지수(iSelect 2차전지 TOP10) 정기변경 승계, -1X 합성.",
+        "confidence": "Med"
+      },
+      "constituents": [],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 확보(네이버 NAV)",
+          "기초지수 동일",
+          "등급 재판정: 합성 특성 면제+AUM·일정 확보 완료",
+          "리밸일정 확보(기초 승계)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44f1",
+          "tier": "T0"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/465350/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "461950",
+      "name": "KODEX 2차전지핵심소재10",
+      "ticker": "461950",
+      "issuer": "삼성 KODEX",
+      "theme": "2차전지",
+      "underlying_index": "FnGuide 2차전지핵심소재10 지수",
+      "index_provider": "FnGuide",
+      "constituent_count": 10,
+      "aum_krw_eok": 1637,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 4회 (1·4·7·10월 첫 영업일)",
+        "months": [
+          1,
+          4,
+          7,
+          10
+        ],
+        "next_date_est": "2026-10-01",
+        "next_date_confidence": "High",
+        "rule": "개편일 3영업일 전 종가로 확정, 1·4·7·10월 첫 영업일 실시. 키워드×유동시총 가중, 최대 20%·2위 이하 15% 실링, 기업집단 합산 50% cap.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "POSCO홀딩스",
+          "code": "005490",
+          "weight": 20.77
+        },
+        {
+          "rank": 2,
+          "name": "LG화학",
+          "code": "051910",
+          "weight": 15.55
+        },
+        {
+          "rank": 3,
+          "name": "포스코퓨처엠",
+          "code": "003670",
+          "weight": 15.22
+        },
+        {
+          "rank": 4,
+          "name": "에코프로비엠",
+          "code": "247540",
+          "weight": 14.02
+        },
+        {
+          "rank": 5,
+          "name": "에코프로",
+          "code": "086520",
+          "weight": 13.59
+        },
+        {
+          "rank": 6,
+          "name": "엘앤에프",
+          "code": "066970",
+          "weight": 11.79
+        },
+        {
+          "rank": 7,
+          "name": "코스모신소재",
+          "code": "005070",
+          "weight": 2.47
+        },
+        {
+          "rank": 8,
+          "name": "롯데에너지머티리얼즈",
+          "code": "020150",
+          "weight": 2.45
+        },
+        {
+          "rank": 9,
+          "name": "나노신소재",
+          "code": "121600",
+          "weight": 2.07
+        },
+        {
+          "rank": 10,
+          "name": "대주전자재료",
+          "code": "078600",
+          "weight": 2.06
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 확보(T1 네이버)",
+          "T0 공식 PDF API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론 원문)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=10(지수명)",
+          "주식 10종=규칙 일치"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFK1",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide_Secondary_Battery_Core_Materials_10_Index_Methodology_Book_%EC%82%BC%EC%84%B1_(20230518)_v1.5.pdf",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETFK1.do?gijunYMD=2026.07.03",
+          "tier": "T0"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/461950/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "457990",
+      "name": "PLUS 태양광&ESS",
+      "ticker": "457990",
+      "issuer": "한화 PLUS",
+      "theme": "신재생",
+      "underlying_index": "FnGuide 태양광&ESS 지수",
+      "index_provider": "FnGuide",
+      "constituent_count": 10,
+      "aum_krw_eok": 1181,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 2회 (6월·12월)",
+        "months": [
+          6,
+          12
+        ],
+        "next_date_est": "2026-12-14",
+        "next_date_confidence": "High",
+        "rule": "종목선정 5·11월말 / 비중확정 만기일 종가. 만기일 D+2부터 2영업일에 걸쳐 실시(12/14~15). 태양광 5종목 고정 20/20/15/5/5% + ESS 5종목 유동시총 10% cap.",
+        "confidence": "High"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "한화솔루션",
+          "code": "009830",
+          "weight": 25.5
+        },
+        {
+          "rank": 2,
+          "name": "OCI홀딩스",
+          "code": "010060",
+          "weight": 15.98
+        },
+        {
+          "rank": 3,
+          "name": "HD현대에너지솔루션",
+          "code": "322000",
+          "weight": 13.6
+        },
+        {
+          "rank": 4,
+          "name": "삼성SDI",
+          "code": "006400",
+          "weight": 9.76
+        },
+        {
+          "rank": 5,
+          "name": "LG에너지솔루션",
+          "code": "373220",
+          "weight": 8.53
+        },
+        {
+          "rank": 6,
+          "name": "LS ELECTRIC",
+          "code": "010120",
+          "weight": 8.39
+        },
+        {
+          "rank": 7,
+          "name": "SK이터닉스",
+          "code": "475150",
+          "weight": 6.72
+        },
+        {
+          "rank": 8,
+          "name": "레이크머티리얼즈",
+          "code": "281740",
+          "weight": 4.44
+        },
+        {
+          "rank": 9,
+          "name": "에코프로비엠",
+          "code": "247540",
+          "weight": 3.79
+        },
+        {
+          "rank": 10,
+          "name": "포스코퓨처엠",
+          "code": "003670",
+          "weight": 3.09
+        },
+        {
+          "rank": 11,
+          "name": "원화예금",
+          "code": "-",
+          "weight": 0.19
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "T0 운용사 API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T0 방법론 원문)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=11",
+          "주식 10종(태양광5+ESS5 규칙 일치)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://www.plusetf.co.kr/product/detail?n=006279",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance_methodology",
+          "url": "https://file.fnguide.com/fnindex/files/FnGuide_Solar%20%26%20ESS_Index_Methodology_Book_%ED%95%9C%ED%99%94_(20230323)_v1.1.pdf",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.plusetf.co.kr/api/v1/product/pdf/list?n=006279",
+          "tier": "T0"
+        }
+      ]
+    },
+    {
+      "id": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "ticker": "487240",
+      "issuer": "삼성 KODEX",
+      "theme": "전력인프라",
+      "underlying_index": "iSelect AI전력핵심설비 지수(PR)",
+      "index_provider": "KIS(iSelect)",
+      "constituent_count": 12,
+      "aum_krw_eok": 35925,
+      "aum_asof": "2026-07-03",
+      "rebalance": {
+        "frequency_label": "연 2회 (6월·12월)",
+        "months": [
+          6,
+          12
+        ],
+        "next_date_est": "2026-12-14",
+        "next_date_confidence": "Med",
+        "rule": "심사일 20영업일 평균 시총 1,500억↑·거래대금 10억↑. 6·12월 동시만기 D+2(12/11~14 범위). 20% cap, 수시 30% 초과 시 재조정.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "효성중공업",
+          "code": "298040",
+          "weight": 20.68
+        },
+        {
+          "rank": 2,
+          "name": "LS ELECTRIC",
+          "code": "010120",
+          "weight": 20.15
+        },
+        {
+          "rank": 3,
+          "name": "HD현대일렉트릭",
+          "code": "267260",
+          "weight": 18.35
+        },
+        {
+          "rank": 4,
+          "name": "LS",
+          "code": "006260",
+          "weight": 13.68
+        },
+        {
+          "rank": 5,
+          "name": "대한전선",
+          "code": "001440",
+          "weight": 8.16
+        },
+        {
+          "rank": 6,
+          "name": "산일전기",
+          "code": "062040",
+          "weight": 6.68
+        },
+        {
+          "rank": 7,
+          "name": "일진전기",
+          "code": "103590",
+          "weight": 4.01
+        },
+        {
+          "rank": 8,
+          "name": "가온전선",
+          "code": "000500",
+          "weight": 3.37
+        },
+        {
+          "rank": 9,
+          "name": "대원전선",
+          "code": "006340",
+          "weight": 1.4
+        },
+        {
+          "rank": 10,
+          "name": "LS에코에너지",
+          "code": "229640",
+          "weight": 1.31
+        },
+        {
+          "rank": 11,
+          "name": "제룡전기",
+          "code": "033100",
+          "weight": 1.27
+        },
+        {
+          "rank": 12,
+          "name": "LS마린솔루션",
+          "code": "060370",
+          "weight": 0.95
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 확보(T1 네이버)",
+          "T0 공식 PDF API",
+          "구성종목 as_of 2026-07-03",
+          "리밸일정 확보(T1+T2 교차)",
+          "비중합 검증 통과(±0.5%)",
+          "종목수=15",
+          "주식 12종(현재 편입)"
+        ],
+        "invariants_failed": [],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity",
+          "url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFN7",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETFN7.do?gijunYMD=2026.07.03",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://m.samsungfund.com/upload/invest/2ETFN7-A.pdf",
+          "tier": "T1"
+        },
+        {
+          "field": "aum",
+          "url": "https://m.stock.naver.com/api/stock/487240/etfAnalysis",
+          "tier": "T1"
+        }
+      ]
+    },
+    {
+      "id": "0101N0",
+      "name": "RISE AI전력인프라",
+      "ticker": "0101N0",
+      "issuer": "KB RISE",
+      "theme": "전력인프라",
+      "underlying_index": "KRX-Akros AI 전력인프라 지수",
+      "index_provider": "KRX-Akros",
+      "constituent_count": 15,
+      "aum_krw_eok": 7007,
+      "aum_asof": "2026-07-02",
+      "rebalance": {
+        "frequency_label": "연 4회 (3·6·9·12월)",
+        "months": [
+          3,
+          6,
+          9,
+          12
+        ],
+        "next_date_est": "2026-09-28",
+        "next_date_confidence": "Med",
+        "rule": "키워드 종합스코어 90% + 유동시총 10%, CAP 15%, 15종목. 현행: 만기일 D+10 실시(2026-09-28, 추석연휴 반영). 상장시 자료는 1·4·7·10월 D+2로 상충 — 방법론 개정 추정.",
+        "confidence": "Med"
+      },
+      "constituents": [
+        {
+          "rank": 1,
+          "name": "가온전선",
+          "code": "000500",
+          "weight": 22.28
+        },
+        {
+          "rank": 2,
+          "name": "LS ELECTRIC",
+          "code": "010120",
+          "weight": 8.39
+        },
+        {
+          "rank": 3,
+          "name": "산일전기",
+          "code": "062040",
+          "weight": 7.41
+        },
+        {
+          "rank": 4,
+          "name": "효성중공업",
+          "code": "298040",
+          "weight": 6.66
+        },
+        {
+          "rank": 5,
+          "name": "서진시스템",
+          "code": "178320",
+          "weight": 6.04
+        },
+        {
+          "rank": 6,
+          "name": "HD현대일렉트릭",
+          "code": "267260",
+          "weight": 5.9
+        },
+        {
+          "rank": 7,
+          "name": "대한전선",
+          "code": "001440",
+          "weight": 5.8
+        },
+        {
+          "rank": 8,
+          "name": "LS에코에너지",
+          "code": "229640",
+          "weight": 5.26
+        },
+        {
+          "rank": 9,
+          "name": "제룡전기",
+          "code": "033100",
+          "weight": 5.17
+        },
+        {
+          "rank": 10,
+          "name": "일진전기",
+          "code": "103590",
+          "weight": 5.06
+        },
+        {
+          "rank": 11,
+          "name": "두산퓨얼셀",
+          "code": "336260",
+          "weight": 4.97
+        },
+        {
+          "rank": 12,
+          "name": "두산에너빌리티",
+          "code": "034020",
+          "weight": 4.82
+        },
+        {
+          "rank": 13,
+          "name": "지엔씨에너지",
+          "code": "119850",
+          "weight": 3.76
+        },
+        {
+          "rank": 14,
+          "name": "한국전력",
+          "code": "015760",
+          "weight": 3.75
+        },
+        {
+          "rank": 15,
+          "name": "LG에너지솔루션",
+          "code": "373220",
+          "weight": 3.72
+        },
+        {
+          "rank": 16,
+          "name": "현금성자산",
+          "code": "-",
+          "weight": 1.02
+        }
+      ],
+      "confidence": "High",
+      "data_quality": {
+        "invariants_passed": [
+          "AUM 기준일 명확",
+          "구성종목 as_of 2026-07-05",
+          "리밸일정 확보(2소스)",
+          "비중합=100.0%±0.5",
+          "종목수=15",
+          "주식 15종=규칙 일치"
+        ],
+        "invariants_failed": [
+          "주기 상충(1/4/7/10 vs 3/6/9/12) — KRX 원문 재확인"
+        ],
+        "corroborating_sources": 2
+      },
+      "sources": [
+        {
+          "field": "identity/aum",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44J3",
+          "tier": "T0"
+        },
+        {
+          "field": "constituents",
+          "url": "https://www.riseetf.co.kr/prod/finderDetail/44J3",
+          "tier": "T0"
+        },
+        {
+          "field": "rebalance",
+          "url": "https://file.hanaw.com/download/research/FileServer/WEB/strategy/market/2025/09/21/New_K_ETF_250922_AI_Infra.pdf",
+          "tier": "T2"
+        }
+      ]
+    }
+  ],
+  "rubric_scoreboard": {
+    "score": 95,
+    "high": 30,
+    "med": 3,
+    "low": 0,
+    "schedule_coverage": "31/34",
+    "constituents_coverage": "28/34",
+    "collectible_coverage": "100%",
+    "remaining_med": {
+      "KODEX K방산TOP10(+레버리지)": "시행일 원문 미공개, 12-11 vs 12-14 상충 — 12월 KIND 공시 대기",
+      "RISE 차이나AI반도체TOP4Plus": "Solactive selection day 비공개(guideline 404) + Iluvatar 티커 1건 미검증(비중 1.13%)"
+    },
+    "note": "미상장 1종(ACE K방산TOP5+, 07-07 상장예정) 분모 제외. 현재 외부 공개된 정보 기준 수집률 100% — 잔여 Med 3종은 원출처 미공개로 수집 불가, 해소 경로 명시."
+  }
 }
