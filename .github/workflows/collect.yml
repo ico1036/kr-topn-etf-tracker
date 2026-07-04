@@ -1,0 +1,35 @@
+name: daily-collect
+
+on:
+  schedule:
+    # 평일 17:40 KST (08:40 UTC) — 장마감 후 운용사/네이버 데이터 갱신 반영
+    - cron: "40 8 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run collector
+        run: python3 collector/collect.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "etf-collector-bot"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet data/universe.json; then
+            git add data/universe.json
+            git commit -m "chore: daily collect $(date -u +%Y-%m-%d) [skip ci]"
+            git push
+          else
+            echo "변경 없음"
+          fi
