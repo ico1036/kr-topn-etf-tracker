@@ -65,6 +65,10 @@ python3 -m http.server 8787
 - RISE: 상품페이지 서버렌더 표 + 네이버 `m.stock.naver.com/api/stock/{ticker}/etfAnalysis`
 - FnGuide 방법론: `file.fnguide.com/fnindex/files/*.pdf` / Akros: `akrostec.com/indices/{code}` / Solactive: `solactive.com/downloads/Guideline-*.pdf`
 
+## 분석 리포트
+
+- [2026-07-13 AI반도체 리밸 프리뷰](analysis/2026-07-13-ai-semi-rebal-preview.md) — SOL AI반도체TOP2플러스(7.3조)·RISE AI반도체TOP10. 핵심: 삼성전기 **-8,640억(ADV 1.0일치) 강제매도** 추정, 한미반도체 편입 시 +4,380억. 선반영 리스크 병기.
+
 ## 로드맵
 
 - [x] Round 1 — 유니버스 수집 (테마별 병렬 크롤)
