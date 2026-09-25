@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T13:44:38+00:00",
+  "generated_at": "2026-09-25T14:08:12+00:00",
   "schema_version": "1.0",
   "note": "압축형 ETF 리밸런싱 트래커. 각 필드는 출처(source_tier)·confidence와 함께 저장. constituents가 비어있으면 Round 2 수집 대기.",
   "etfs": [
@@ -13,7 +13,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 10,
       "aum_krw_eok": 102252.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (4월·10월)",
         "months": [
@@ -91,7 +91,7 @@
       "data_quality": {
         "invariants_passed": [
           "AUM 2소스 근접",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일 정정: 10-16→10-12(만기 익주 월요일)",
           "리밸일정 확보(T0 방법론 원문)",
           "리밸주기 방법론 일치",
@@ -136,7 +136,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 10,
       "aum_krw_eok": 6738.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (4월·10월)",
         "months": [
@@ -183,7 +183,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 10,
       "aum_krw_eok": 8589.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (4월·10월) — 기초 승계, 커버드콜 오버레이는 액티브",
         "months": [
@@ -230,7 +230,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 15,
       "aum_krw_eok": 42097.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -400,7 +400,8 @@
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
-          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
+          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
         "corroborating_sources": 2
       },
@@ -437,7 +438,7 @@
       "index_provider": "Akros",
       "constituent_count": 10,
       "aum_krw_eok": 2205.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (3·6·9·12월, 미국 옵션만기일)",
         "months": [
@@ -562,7 +563,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 10,
       "aum_krw_eok": 57764.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (1·4·7·10월)",
         "months": [
@@ -698,7 +699,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 10,
       "aum_krw_eok": 1954.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (1·4·7·10월)",
         "months": [
@@ -777,7 +778,7 @@
       "confidence": "High",
       "data_quality": {
         "invariants_passed": [
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(T0 방법론 원문)",
           "비중합=100.0%±0.5",
           "임박: 2026-07-13 정기변경(D-8)",
@@ -820,7 +821,7 @@
       "index_provider": "Solactive",
       "constituent_count": 15,
       "aum_krw_eok": 268.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월 말) + 월별 IPO 패스트엔트리",
         "months": [
@@ -995,6 +996,7 @@
           "구성종목 stale(79일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(8일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(9일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
@@ -1028,7 +1030,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 20,
       "aum_krw_eok": 11778.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (3·6·9·12월)",
         "months": [
@@ -1230,7 +1232,8 @@
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
-          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
+          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
         "corroborating_sources": 2
       },
@@ -1262,7 +1265,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 20,
       "aum_krw_eok": 1400.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (1·4·7·10월)",
         "months": [
@@ -1470,6 +1473,7 @@
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "시행일 규칙 미명시(D+2 유추) — 임박이라 재확인 필수"
         ],
         "corroborating_sources": 2
@@ -1502,7 +1506,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 13,
       "aum_krw_eok": 14503.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월)",
         "months": [
@@ -1650,7 +1654,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
       "aum_krw_eok": 5534.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -1728,7 +1732,7 @@
       "data_quality": {
         "invariants_passed": [
           "AUM 기준일 명확",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(T1 투자설명서+T2 교차)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -1766,7 +1770,7 @@
       "index_provider": "KRX",
       "constituent_count": 10,
       "aum_krw_eok": 1945.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 분기 (실시월 미확인)",
         "months": [
@@ -1847,7 +1851,7 @@
         "invariants_passed": [
           "KRX 지수(공신력 높음)",
           "T0 공식 PDF API",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
           "주식 10종=TOP10 규칙 일치"
@@ -1892,7 +1896,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
       "aum_krw_eok": 3559.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -1970,7 +1974,7 @@
       "data_quality": {
         "invariants_passed": [
           "T0 공식 PDF API",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(주기 2소스)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -2015,7 +2019,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
       "aum_krw_eok": 365.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -2116,7 +2120,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 15,
       "aum_krw_eok": 7156.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -2292,7 +2296,8 @@
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
-          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
+          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
         "corroborating_sources": 2
       },
@@ -2324,7 +2329,7 @@
       "index_provider": "KRX",
       "constituent_count": 10,
       "aum_krw_eok": 2474.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -2403,7 +2408,7 @@
         "invariants_passed": [
           "AUM 기준일 명확",
           "KRX 지수",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(패밀리 규칙)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -2443,7 +2448,7 @@
       "index_provider": "KRX",
       "constituent_count": 23,
       "aum_krw_eok": 469.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "액티브 (수시 리밸)",
         "months": [],
@@ -2660,6 +2665,7 @@
           "구성종목 stale(79일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(8일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(9일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
@@ -2688,7 +2694,7 @@
       "index_provider": "KRX",
       "constituent_count": 10,
       "aum_krw_eok": 354.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -2766,7 +2772,7 @@
       "data_quality": {
         "invariants_passed": [
           "KRX 지수",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(패밀리 규칙)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -2801,7 +2807,7 @@
       "index_provider": "KRX",
       "constituent_count": 10,
       "aum_krw_eok": 204.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -2879,7 +2885,7 @@
       "data_quality": {
         "invariants_passed": [
           "KRX 지수",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(패밀리 규칙)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -2914,7 +2920,7 @@
       "index_provider": "Solactive(KEDI)",
       "constituent_count": 10,
       "aum_krw_eok": 58.7,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월 첫째 수요일)",
         "months": [
@@ -3038,7 +3044,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 10,
       "aum_krw_eok": 8479.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -3116,7 +3122,7 @@
       "data_quality": {
         "invariants_passed": [
           "FnGuide 지수",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(T0 방법론 원문)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -3154,7 +3160,7 @@
       "index_provider": "Akros(KIS계열)",
       "constituent_count": 15,
       "aum_krw_eok": 1006.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (3·6·9·12월 말 D+3)",
         "months": [
@@ -3328,7 +3334,8 @@
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
-          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
+          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
         "corroborating_sources": 2
       },
@@ -3360,7 +3367,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 32,
       "aum_krw_eok": 10836.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "액티브 (벤치마크: 연 2회 6·12월)",
         "months": [],
@@ -3628,7 +3635,8 @@
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
-          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
+          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
         "corroborating_sources": 2
       },
@@ -3660,7 +3668,7 @@
       "index_provider": "KIS/자체",
       "constituent_count": 16,
       "aum_krw_eok": 75.6,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "액티브 (수시 리밸)",
         "months": [],
@@ -3832,7 +3840,8 @@
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
-          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
+          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
         "corroborating_sources": 2
       },
@@ -3859,7 +3868,7 @@
       "index_provider": "KRX",
       "constituent_count": 10,
       "aum_krw_eok": 6857.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -3938,7 +3947,7 @@
         "invariants_passed": [
           "AUM 기준일 명확",
           "KRX 지수",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(3·9월 만기 D+1)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -3976,7 +3985,7 @@
       "index_provider": "KRX",
       "constituent_count": 10,
       "aum_krw_eok": 1708.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -4023,7 +4032,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
       "aum_krw_eok": 684.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월 말)",
         "months": [
@@ -4103,7 +4112,7 @@
       "data_quality": {
         "invariants_passed": [
           "AUM 기준일 명확",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(T1 투자설명서)",
           "만기일 비연동 확인",
           "비중합=100.0%±0.5",
@@ -4141,7 +4150,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
       "aum_krw_eok": 331.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월 말)",
         "months": [
@@ -4190,7 +4199,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 10,
       "aum_krw_eok": 1712.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (1·4·7·10월 첫 영업일)",
         "months": [
@@ -4271,7 +4280,7 @@
         "invariants_passed": [
           "AUM 확보(T1 네이버)",
           "T0 공식 PDF API",
-          "구성종목 as_of 2026-09-24",
+          "구성종목 as_of 2026-09-25",
           "리밸일정 확보(T0 방법론 원문)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10(지수명)",
@@ -4313,7 +4322,7 @@
       "index_provider": "FnGuide",
       "constituent_count": 10,
       "aum_krw_eok": 1279.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -4460,7 +4469,8 @@
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
-          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
+          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
         "corroborating_sources": 2
       },
@@ -4492,7 +4502,7 @@
       "index_provider": "KIS(iSelect)",
       "constituent_count": 12,
       "aum_krw_eok": 32988.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -4645,7 +4655,8 @@
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
-          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
+          "구성종목 stale(83일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(84일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)"
         ],
         "corroborating_sources": 2
       },
@@ -4682,7 +4693,7 @@
       "index_provider": "KRX-Akros",
       "constituent_count": 15,
       "aum_krw_eok": 6751.0,
-      "aum_asof": "2026-09-24",
+      "aum_asof": "2026-09-25",
       "rebalance": {
         "frequency_label": "연 4회 (3·6·9·12월)",
         "months": [
@@ -4857,6 +4868,7 @@
           "구성종목 stale(79일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(80일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(81일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(82일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(8일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(9일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "주기 상충(1/4/7/10 vs 3/6/9/12) — KRX 원문 재확인"
