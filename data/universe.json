@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T16:28:22+00:00",
+  "generated_at": "2026-11-04T16:31:02+00:00",
   "schema_version": "1.0",
   "note": "압축형 ETF 리밸런싱 트래커. 각 필드는 출처(source_tier)·confidence와 함께 저장. constituents가 비어있으면 Round 2 수집 대기.",
   "etfs": [
@@ -12,8 +12,8 @@
       "underlying_index": "FnGuide 반도체TOP10 지수",
       "index_provider": "FnGuide",
       "constituent_count": 10,
-      "aum_krw_eok": 81771.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 77366.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (4월·10월)",
         "months": [
@@ -28,70 +28,70 @@
       "constituents": [
         {
           "rank": 1,
-          "name": "SK하이닉스",
-          "code": "000660",
-          "weight": 26.7
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 26.9
         },
         {
           "rank": 2,
-          "name": "삼성전자",
-          "code": "005930",
-          "weight": 26.62
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 26.73
         },
         {
           "rank": 3,
           "name": "SK스퀘어",
           "code": "402340",
-          "weight": 25.46
+          "weight": 25.4
         },
         {
           "rank": 4,
           "name": "한미반도체",
           "code": "042700",
-          "weight": 4.87
+          "weight": 4.82
         },
         {
           "rank": 5,
           "name": "주성엔지니어링",
           "code": "036930",
-          "weight": 3.97
+          "weight": 3.87
         },
         {
           "rank": 6,
           "name": "이수페타시스",
           "code": "007660",
-          "weight": 3.42
+          "weight": 3.27
         },
         {
           "rank": 7,
           "name": "이오테크닉스",
           "code": "039030",
-          "weight": 2.35
+          "weight": 2.27
         },
         {
           "rank": 8,
-          "name": "원익IPS",
-          "code": "240810",
-          "weight": 2.08
+          "name": "DB하이텍",
+          "code": "000990",
+          "weight": 2.22
         },
         {
           "rank": 9,
-          "name": "DB하이텍",
-          "code": "000990",
-          "weight": 2.06
+          "name": "원익IPS",
+          "code": "240810",
+          "weight": 2.03
         },
         {
           "rank": 10,
           "name": "리노공업",
           "code": "058470",
-          "weight": 2.02
+          "weight": 2.0
         }
       ],
       "confidence": "High",
       "data_quality": {
         "invariants_passed": [
           "AUM 2소스 근접",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일 정정: 10-16→10-12(만기 익주 월요일)",
           "리밸일정 확보(T0 방법론 원문)",
           "리밸주기 방법론 일치",
@@ -135,8 +135,8 @@
       "underlying_index": "FnGuide 반도체TOP10 지수 (2X 레버리지)",
       "index_provider": "FnGuide",
       "constituent_count": 10,
-      "aum_krw_eok": 5941.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 5378.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (4월·10월)",
         "months": [
@@ -182,8 +182,8 @@
       "underlying_index": "FnGuide 반도체TOP10 기반 (액티브 커버드콜)",
       "index_provider": "FnGuide",
       "constituent_count": 10,
-      "aum_krw_eok": 7141.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 6789.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (4월·10월) — 기초 승계, 커버드콜 오버레이는 액티브",
         "months": [
@@ -229,8 +229,8 @@
       "underlying_index": "FnGuide AI반도체 TOP2+ 지수 (FI00.WLT.NMS)",
       "index_provider": "FnGuide",
       "constituent_count": 15,
-      "aum_krw_eok": 34775.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 32945.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -364,6 +364,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -464,8 +465,8 @@
       "underlying_index": "Akros 미국 AI반도체 Top3 플러스 지수(PR)",
       "index_provider": "Akros",
       "constituent_count": 10,
-      "aum_krw_eok": 1671.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 1595.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (3·6·9·12월, 미국 옵션만기일)",
         "months": [
@@ -589,8 +590,8 @@
       "underlying_index": "FnGuide AI반도체TOP2플러스 지수 (FI00.WLT.KSS)",
       "index_provider": "FnGuide",
       "constituent_count": 10,
-      "aum_krw_eok": 47109.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 44453.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (1·4·7·10월)",
         "months": [
@@ -725,8 +726,8 @@
       "underlying_index": "FnGuide AI Semiconductor TOP10 지수(PR)",
       "index_provider": "FnGuide",
       "constituent_count": 10,
-      "aum_krw_eok": 1603.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 1530.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (1·4·7·10월)",
         "months": [
@@ -743,69 +744,69 @@
       "constituents": [
         {
           "rank": 1,
-          "name": "SK하이닉스",
-          "code": "000660",
-          "weight": 16.92
+          "name": "삼성전자",
+          "code": "005930",
+          "weight": 17.11
         },
         {
           "rank": 2,
-          "name": "삼성전자",
-          "code": "005930",
-          "weight": 16.88
+          "name": "SK하이닉스",
+          "code": "000660",
+          "weight": 16.99
         },
         {
           "rank": 3,
           "name": "SK스퀘어",
           "code": "402340",
-          "weight": 11.64
+          "weight": 11.65
         },
         {
           "rank": 4,
           "name": "ISC",
           "code": "095340",
-          "weight": 10.38
+          "weight": 10.44
         },
         {
           "rank": 5,
           "name": "제주반도체",
           "code": "080220",
-          "weight": 9.81
+          "weight": 9.87
         },
         {
           "rank": 6,
           "name": "한미반도체",
           "code": "042700",
-          "weight": 9.25
+          "weight": 9.18
         },
         {
           "rank": 7,
           "name": "원익IPS",
           "code": "240810",
-          "weight": 8.76
+          "weight": 8.6
         },
         {
           "rank": 8,
           "name": "파두",
           "code": "440110",
-          "weight": 7.06
+          "weight": 7.0
         },
         {
           "rank": 9,
           "name": "테크윙",
           "code": "089030",
-          "weight": 6.09
+          "weight": 6.0
         },
         {
           "rank": 10,
           "name": "와이씨",
           "code": "232140",
-          "weight": 3.06
+          "weight": 2.99
         }
       ],
       "confidence": "High",
       "data_quality": {
         "invariants_passed": [
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(T0 방법론 원문)",
           "비중합=100.0%±0.5",
           "임박: 2026-07-13 정기변경(D-8)",
@@ -848,7 +849,7 @@
       "index_provider": "Solactive",
       "constituent_count": 15,
       "aum_krw_eok": 171.0,
-      "aum_asof": "2026-11-03",
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월 말) + 월별 IPO 패스트엔트리",
         "months": [
@@ -989,6 +990,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(120일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(121일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(15일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(16일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -1083,8 +1085,8 @@
       "underlying_index": "FnGuide AI 반도체 TOP3+ 지수 (구 AI반도체 포커스)",
       "index_provider": "FnGuide",
       "constituent_count": 20,
-      "aum_krw_eok": 9726.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 9193.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (3·6·9·12월)",
         "months": [
@@ -1250,6 +1252,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -1345,8 +1348,8 @@
       "underlying_index": "iSelect AI반도체핵심공정 지수",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 20,
-      "aum_krw_eok": 1928.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 1536.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (1·4·7·10월)",
         "months": [
@@ -1517,6 +1520,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -1613,8 +1617,8 @@
       "underlying_index": "FnGuide 조선 TOP3 플러스 지수(PR)",
       "index_provider": "FnGuide",
       "constituent_count": 13,
-      "aum_krw_eok": 10017.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 10025.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월)",
         "months": [
@@ -1761,8 +1765,8 @@
       "underlying_index": "iSelect 조선TOP10 지수(PR)",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
-      "aum_krw_eok": 3836.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 3818.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -1779,55 +1783,55 @@
           "rank": 1,
           "name": "HD한국조선해양",
           "code": "009540",
-          "weight": 22.03
+          "weight": 22.61
         },
         {
           "rank": 2,
           "name": "한화오션",
           "code": "042660",
-          "weight": 21.01
+          "weight": 20.52
         },
         {
           "rank": 3,
           "name": "HD현대중공업",
           "code": "329180",
-          "weight": 19.75
+          "weight": 19.64
         },
         {
           "rank": 4,
           "name": "삼성중공업",
           "code": "010140",
-          "weight": 18.82
+          "weight": 18.93
         },
         {
           "rank": 5,
           "name": "HD현대마린솔루션",
           "code": "443060",
-          "weight": 9.41
+          "weight": 9.51
         },
         {
           "rank": 6,
           "name": "한화엔진",
           "code": "082740",
-          "weight": 3.35
+          "weight": 3.21
         },
         {
           "rank": 7,
-          "name": "HD현대마린엔진",
-          "code": "071970",
+          "name": "대한조선",
+          "code": "439260",
           "weight": 1.76
         },
         {
           "rank": 8,
-          "name": "대한조선",
-          "code": "439260",
-          "weight": 1.73
+          "name": "HD현대마린엔진",
+          "code": "071970",
+          "weight": 1.67
         },
         {
           "rank": 9,
           "name": "한국카본",
           "code": "017960",
-          "weight": 1.03
+          "weight": 1.02
         },
         {
           "rank": 10,
@@ -1840,7 +1844,7 @@
       "data_quality": {
         "invariants_passed": [
           "AUM 기준일 명확",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(T1 투자설명서+T2 교차)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -1877,8 +1881,8 @@
       "underlying_index": "KRX K조선TOP10 지수(PR)",
       "index_provider": "KRX",
       "constituent_count": 10,
-      "aum_krw_eok": 1463.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 1462.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 분기 (실시월 미확인)",
         "months": [
@@ -1895,51 +1899,51 @@
       "constituents": [
         {
           "rank": 1,
-          "name": "삼성중공업",
-          "code": "010140",
-          "weight": 22.66
+          "name": "HD한국조선해양",
+          "code": "009540",
+          "weight": 22.85
         },
         {
           "rank": 2,
-          "name": "HD한국조선해양",
-          "code": "009540",
-          "weight": 22.21
+          "name": "삼성중공업",
+          "code": "010140",
+          "weight": 22.85
         },
         {
           "rank": 3,
-          "name": "한화오션",
-          "code": "042660",
-          "weight": 19.73
+          "name": "HD현대중공업",
+          "code": "329180",
+          "weight": 19.61
         },
         {
           "rank": 4,
-          "name": "HD현대중공업",
-          "code": "329180",
-          "weight": 19.67
+          "name": "한화오션",
+          "code": "042660",
+          "weight": 19.31
         },
         {
           "rank": 5,
           "name": "한화엔진",
           "code": "082740",
-          "weight": 5.89
+          "weight": 5.68
         },
         {
           "rank": 6,
           "name": "HD현대마린엔진",
           "code": "071970",
-          "weight": 4.35
+          "weight": 4.15
         },
         {
           "rank": 7,
           "name": "HJ중공업",
           "code": "097230",
-          "weight": 2.55
+          "weight": 2.57
         },
         {
           "rank": 8,
           "name": "대한조선",
           "code": "439260",
-          "weight": 1.75
+          "weight": 1.78
         },
         {
           "rank": 9,
@@ -1951,7 +1955,7 @@
           "rank": 10,
           "name": "한국카본",
           "code": "017960",
-          "weight": 0.51
+          "weight": 0.5
         }
       ],
       "confidence": "High",
@@ -1959,7 +1963,7 @@
         "invariants_passed": [
           "KRX 지수(공신력 높음)",
           "T0 공식 PDF API",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
           "주식 10종=TOP10 규칙 일치"
@@ -2003,8 +2007,8 @@
       "underlying_index": "iSelect K방산TOP10 지수(PR)",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
-      "aum_krw_eok": 2616.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 2568.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -2021,37 +2025,37 @@
           "rank": 1,
           "name": "한화에어로스페이스",
           "code": "012450",
-          "weight": 23.18
+          "weight": 23.55
         },
         {
           "rank": 2,
           "name": "한국항공우주",
           "code": "047810",
-          "weight": 22.15
+          "weight": 22.1
         },
         {
           "rank": 3,
           "name": "LIG디펜스앤에어로스페이스",
           "code": "079550",
-          "weight": 16.56
+          "weight": 16.41
         },
         {
           "rank": 4,
           "name": "한화시스템",
           "code": "272210",
-          "weight": 16.09
+          "weight": 15.9
         },
         {
           "rank": 5,
           "name": "현대로템",
           "code": "064350",
-          "weight": 13.26
+          "weight": 13.18
         },
         {
           "rank": 6,
           "name": "풍산",
           "code": "103140",
-          "weight": 5.55
+          "weight": 5.77
         },
         {
           "rank": 7,
@@ -2063,26 +2067,26 @@
           "rank": 8,
           "name": "인텔리안테크",
           "code": "189300",
-          "weight": 1.09
+          "weight": 1.05
         },
         {
           "rank": 9,
           "name": "엠앤씨솔루션",
           "code": "484870",
-          "weight": 0.54
+          "weight": 0.5
         },
         {
           "rank": 10,
           "name": "스피어",
           "code": "347700",
-          "weight": 0.35
+          "weight": 0.31
         }
       ],
       "confidence": "Med",
       "data_quality": {
         "invariants_passed": [
           "T0 공식 PDF API",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(주기 2소스)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -2126,8 +2130,8 @@
       "underlying_index": "iSelect K방산TOP10 지수(PR) ×2",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
-      "aum_krw_eok": 247.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 239.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -2227,8 +2231,8 @@
       "underlying_index": "iSelect 원자력 지수(PR)",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 15,
-      "aum_krw_eok": 4824.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 4600.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -2368,6 +2372,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -2463,8 +2468,8 @@
       "underlying_index": "KRX 바이오 TOP10 지수 (구 바이오 K-뉴딜)",
       "index_provider": "KRX",
       "constituent_count": 10,
-      "aum_krw_eok": 2491.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 2488.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -2481,61 +2486,61 @@
           "rank": 1,
           "name": "셀트리온",
           "code": "068270",
-          "weight": 27.86
+          "weight": 27.59
         },
         {
           "rank": 2,
           "name": "삼성바이오로직스",
           "code": "207940",
-          "weight": 26.6
+          "weight": 27.19
         },
         {
           "rank": 3,
           "name": "알테오젠",
           "code": "196170",
-          "weight": 20.18
+          "weight": 20.25
         },
         {
           "rank": 4,
           "name": "HLB",
           "code": "028300",
-          "weight": 5.99
+          "weight": 5.85
         },
         {
           "rank": 5,
           "name": "유한양행",
           "code": "000100",
-          "weight": 5.15
+          "weight": 5.21
         },
         {
           "rank": 6,
           "name": "SK바이오팜",
           "code": "326030",
-          "weight": 3.72
+          "weight": 3.81
         },
         {
           "rank": 7,
           "name": "한미약품",
           "code": "128940",
-          "weight": 3.31
+          "weight": 3.24
         },
         {
           "rank": 8,
           "name": "삼천당제약",
           "code": "000250",
-          "weight": 3.11
+          "weight": 2.9
         },
         {
           "rank": 9,
           "name": "삼성에피스홀딩스",
           "code": "0126Z0",
-          "weight": 2.07
+          "weight": 2.03
         },
         {
           "rank": 10,
           "name": "에이비엘바이오",
           "code": "298380",
-          "weight": 2.01
+          "weight": 1.94
         }
       ],
       "confidence": "High",
@@ -2543,7 +2548,7 @@
         "invariants_passed": [
           "AUM 기준일 명확",
           "KRX 지수",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(패밀리 규칙)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -2582,8 +2587,8 @@
       "underlying_index": "KRX 바이오 TOP10 지수 (액티브)",
       "index_provider": "KRX",
       "constituent_count": 23,
-      "aum_krw_eok": 409.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 399.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "액티브 (수시 리밸)",
         "months": [],
@@ -2766,6 +2771,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(120일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(121일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(15일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(16일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -2855,8 +2861,8 @@
       "underlying_index": "KRX 인터넷 TOP10 지수 (구 인터넷 K-뉴딜)",
       "index_provider": "KRX",
       "constituent_count": 10,
-      "aum_krw_eok": 312.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 300.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -2873,68 +2879,68 @@
           "rank": 1,
           "name": "카카오",
           "code": "035720",
-          "weight": 24.32
+          "weight": 24.61
         },
         {
           "rank": 2,
           "name": "NAVER",
           "code": "035420",
-          "weight": 24.09
+          "weight": 24.22
         },
         {
           "rank": 3,
           "name": "서진시스템",
           "code": "178320",
-          "weight": 22.35
+          "weight": 21.99
         },
         {
           "rank": 4,
           "name": "대한광통신",
           "code": "010170",
-          "weight": 12.16
+          "weight": 12.2
         },
         {
           "rank": 5,
           "name": "안랩",
           "code": "053800",
-          "weight": 4.05
+          "weight": 4.13
         },
         {
           "rank": 6,
           "name": "케이엠더블유",
           "code": "032500",
-          "weight": 3.53
+          "weight": 3.4
         },
         {
           "rank": 7,
           "name": "쏠리드",
           "code": "050890",
-          "weight": 2.95
+          "weight": 2.93
         },
         {
           "rank": 8,
           "name": "인텔리안테크",
           "code": "189300",
-          "weight": 2.79
+          "weight": 2.75
         },
         {
           "rank": 9,
           "name": "피노",
           "code": "033790",
-          "weight": 2.38
+          "weight": 2.36
         },
         {
           "rank": 10,
           "name": "삼지전자",
           "code": "037460",
-          "weight": 1.24
+          "weight": 1.26
         }
       ],
       "confidence": "High",
       "data_quality": {
         "invariants_passed": [
           "KRX 지수",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(패밀리 규칙)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -2968,8 +2974,8 @@
       "underlying_index": "KRX 게임 TOP10 지수 (구 게임 K-뉴딜)",
       "index_provider": "KRX",
       "constituent_count": 10,
-      "aum_krw_eok": 189.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 188.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -2992,62 +2998,62 @@
           "rank": 2,
           "name": "NC",
           "code": "036570",
-          "weight": 25.6
+          "weight": 25.37
         },
         {
           "rank": 3,
           "name": "크래프톤",
           "code": "259960",
-          "weight": 23.35
+          "weight": 23.55
         },
         {
           "rank": 4,
           "name": "펄어비스",
           "code": "263750",
-          "weight": 8.01
+          "weight": 7.69
         },
         {
           "rank": 5,
           "name": "NHN",
           "code": "181710",
-          "weight": 3.94
+          "weight": 3.97
         },
         {
           "rank": 6,
           "name": "더블유게임즈",
           "code": "192080",
-          "weight": 3.72
+          "weight": 3.8
         },
         {
           "rank": 7,
           "name": "카카오게임즈",
           "code": "293490",
-          "weight": 3.52
+          "weight": 3.67
         },
         {
           "rank": 8,
           "name": "시프트업",
           "code": "462870",
-          "weight": 2.54
+          "weight": 2.64
         },
         {
           "rank": 9,
           "name": "위메이드",
           "code": "112040",
-          "weight": 1.7
+          "weight": 1.71
         },
         {
           "rank": 10,
           "name": "넥슨게임즈",
           "code": "225570",
-          "weight": 1.43
+          "weight": 1.42
         }
       ],
       "confidence": "High",
       "data_quality": {
         "invariants_passed": [
           "KRX 지수",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(패밀리 규칙)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -3081,8 +3087,8 @@
       "underlying_index": "Solactive-KEDI 글로벌 게임 테크 TOP3 플러스 지수",
       "index_provider": "Solactive(KEDI)",
       "constituent_count": 10,
-      "aum_krw_eok": 52.8,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 51.1,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월 첫째 수요일)",
         "months": [
@@ -3205,8 +3211,8 @@
       "underlying_index": "FnGuide 은행고배당플러스TOP10 지수",
       "index_provider": "FnGuide",
       "constituent_count": 10,
-      "aum_krw_eok": 8927.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 8479.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -3223,55 +3229,55 @@
           "rank": 1,
           "name": "하나금융지주",
           "code": "086790",
-          "weight": 16.35
+          "weight": 16.32
         },
         {
           "rank": 2,
-          "name": "KB금융",
-          "code": "105560",
-          "weight": 16.14
+          "name": "우리금융지주",
+          "code": "316140",
+          "weight": 16.15
         },
         {
           "rank": 3,
-          "name": "우리금융지주",
-          "code": "316140",
-          "weight": 16.1
+          "name": "KB금융",
+          "code": "105560",
+          "weight": 16.12
         },
         {
           "rank": 4,
           "name": "기업은행",
           "code": "024110",
-          "weight": 14.52
+          "weight": 14.53
         },
         {
           "rank": 5,
           "name": "신한지주",
           "code": "055550",
-          "weight": 14.29
+          "weight": 14.26
         },
         {
           "rank": 6,
           "name": "JB금융지주",
           "code": "175330",
-          "weight": 5.99
+          "weight": 6.02
         },
         {
           "rank": 7,
-          "name": "BNK금융지주",
-          "code": "138930",
-          "weight": 5.13
+          "name": "삼성화재",
+          "code": "000810",
+          "weight": 5.17
         },
         {
           "rank": 8,
-          "name": "삼성화재",
-          "code": "000810",
-          "weight": 5.11
+          "name": "BNK금융지주",
+          "code": "138930",
+          "weight": 5.12
         },
         {
           "rank": 9,
           "name": "한국금융지주",
           "code": "071050",
-          "weight": 3.47
+          "weight": 3.43
         },
         {
           "rank": 10,
@@ -3284,7 +3290,7 @@
       "data_quality": {
         "invariants_passed": [
           "FnGuide 지수",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(T0 방법론 원문)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -3321,8 +3327,8 @@
       "underlying_index": "Akros K-휴머노이드로봇 TOP2+ 지수",
       "index_provider": "Akros(KIS계열)",
       "constituent_count": 15,
-      "aum_krw_eok": 870.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 818.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (3·6·9·12월 말 D+3)",
         "months": [
@@ -3460,6 +3466,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -3555,8 +3562,8 @@
       "underlying_index": "iSelect K-로봇테마 지수 (액티브)",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 32,
-      "aum_krw_eok": 9145.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 8718.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "액티브 (벤치마크: 연 2회 6·12월)",
         "months": [],
@@ -3788,6 +3795,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -3883,8 +3891,8 @@
       "underlying_index": "10개 산업 TOP2 바스켓 (액티브)",
       "index_provider": "KIS/자체",
       "constituent_count": 16,
-      "aum_krw_eok": 60.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 58.6,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "액티브 (수시 리밸)",
         "months": [],
@@ -4020,6 +4028,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -4110,8 +4119,8 @@
       "underlying_index": "KRX 2차전지 TOP10 지수 (구 2차전지 K-뉴딜)",
       "index_provider": "KRX",
       "constituent_count": 10,
-      "aum_krw_eok": 6757.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 6333.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -4126,57 +4135,57 @@
       "constituents": [
         {
           "rank": 1,
-          "name": "삼성SDI",
-          "code": "006400",
-          "weight": 26.66
+          "name": "LG에너지솔루션",
+          "code": "373220",
+          "weight": 26.88
         },
         {
           "rank": 2,
-          "name": "LG에너지솔루션",
-          "code": "373220",
-          "weight": 26.54
+          "name": "삼성SDI",
+          "code": "006400",
+          "weight": 25.83
         },
         {
           "rank": 3,
           "name": "POSCO홀딩스",
           "code": "005490",
-          "weight": 22.75
+          "weight": 22.85
         },
         {
           "rank": 4,
           "name": "LG화학",
           "code": "051910",
-          "weight": 5.66
+          "weight": 5.96
         },
         {
           "rank": 5,
           "name": "SK이노베이션",
           "code": "096770",
-          "weight": 5.36
+          "weight": 5.19
         },
         {
           "rank": 6,
           "name": "에코프로",
           "code": "086520",
-          "weight": 4.04
+          "weight": 4.1
         },
         {
           "rank": 7,
           "name": "포스코퓨처엠",
           "code": "003670",
-          "weight": 3.31
+          "weight": 3.42
         },
         {
           "rank": 8,
           "name": "에코프로비엠",
           "code": "247540",
-          "weight": 3.09
+          "weight": 3.13
         },
         {
           "rank": 9,
           "name": "엘앤에프",
           "code": "066970",
-          "weight": 1.5
+          "weight": 1.53
         },
         {
           "rank": 10,
@@ -4190,7 +4199,7 @@
         "invariants_passed": [
           "AUM 기준일 명확",
           "KRX 지수",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(3·9월 만기 D+1)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10",
@@ -4227,8 +4236,8 @@
       "underlying_index": "KRX 2차전지 TOP10 지수 (2X)",
       "index_provider": "KRX",
       "constituent_count": 10,
-      "aum_krw_eok": 1657.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 1429.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (3월·9월)",
         "months": [
@@ -4274,8 +4283,8 @@
       "underlying_index": "iSelect 2차전지 TOP10 지수",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
-      "aum_krw_eok": 645.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 610.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월 말)",
         "months": [
@@ -4292,70 +4301,70 @@
       "constituents": [
         {
           "rank": 1,
-          "name": "SK이노베이션",
-          "code": "096770",
-          "weight": 16.11
+          "name": "LG에너지솔루션",
+          "code": "373220",
+          "weight": 16.08
         },
         {
           "rank": 2,
-          "name": "LG에너지솔루션",
-          "code": "373220",
-          "weight": 15.88
+          "name": "SK이노베이션",
+          "code": "096770",
+          "weight": 15.58
         },
         {
           "rank": 3,
           "name": "삼성SDI",
           "code": "006400",
-          "weight": 15.51
+          "weight": 15.02
         },
         {
           "rank": 4,
           "name": "POSCO홀딩스",
           "code": "005490",
-          "weight": 13.71
+          "weight": 13.77
         },
         {
           "rank": 5,
           "name": "에코프로",
           "code": "086520",
-          "weight": 11.72
+          "weight": 11.89
         },
         {
           "rank": 6,
           "name": "포스코퓨처엠",
           "code": "003670",
-          "weight": 9.48
+          "weight": 9.8
         },
         {
           "rank": 7,
           "name": "에코프로비엠",
           "code": "247540",
-          "weight": 8.53
+          "weight": 8.66
         },
         {
           "rank": 8,
           "name": "엘앤에프",
           "code": "066970",
-          "weight": 3.88
+          "weight": 3.95
         },
         {
           "rank": 9,
           "name": "SKC",
           "code": "011790",
-          "weight": 2.93
+          "weight": 2.94
         },
         {
           "rank": 10,
           "name": "에코프로머티",
           "code": "450080",
-          "weight": 1.75
+          "weight": 1.78
         }
       ],
       "confidence": "High",
       "data_quality": {
         "invariants_passed": [
           "AUM 기준일 명확",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(T1 투자설명서)",
           "만기일 비연동 확인",
           "비중합=100.0%±0.5",
@@ -4392,8 +4401,8 @@
       "underlying_index": "iSelect 2차전지 TOP10 지수 (-1X)",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 10,
-      "aum_krw_eok": 341.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 362.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (2·5·8·11월 말)",
         "months": [
@@ -4441,8 +4450,8 @@
       "underlying_index": "FnGuide 2차전지핵심소재10 지수",
       "index_provider": "FnGuide",
       "constituent_count": 10,
-      "aum_krw_eok": 1602.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 1526.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (1·4·7·10월 첫 영업일)",
         "months": [
@@ -4461,61 +4470,61 @@
           "rank": 1,
           "name": "POSCO홀딩스",
           "code": "005490",
-          "weight": 20.15
+          "weight": 19.89
         },
         {
           "rank": 2,
           "name": "LG화학",
           "code": "051910",
-          "weight": 15.59
+          "weight": 16.14
         },
         {
           "rank": 3,
           "name": "포스코퓨처엠",
           "code": "003670",
-          "weight": 15.5
+          "weight": 15.74
         },
         {
           "rank": 4,
           "name": "에코프로",
           "code": "086520",
-          "weight": 15.29
+          "weight": 15.25
         },
         {
           "rank": 5,
           "name": "에코프로비엠",
           "code": "247540",
-          "weight": 14.04
+          "weight": 14.0
         },
         {
           "rank": 6,
           "name": "엘앤에프",
           "code": "066970",
-          "weight": 9.68
+          "weight": 9.69
         },
         {
           "rank": 7,
           "name": "나노신소재",
           "code": "121600",
-          "weight": 3.16
+          "weight": 3.12
         },
         {
           "rank": 8,
           "name": "코스모신소재",
           "code": "005070",
-          "weight": 2.34
+          "weight": 2.22
         },
         {
           "rank": 9,
           "name": "롯데에너지머티리얼즈",
           "code": "020150",
-          "weight": 2.32
+          "weight": 2.18
         },
         {
           "rank": 10,
           "name": "대주전자재료",
           "code": "078600",
-          "weight": 1.94
+          "weight": 1.77
         }
       ],
       "confidence": "High",
@@ -4523,7 +4532,7 @@
         "invariants_passed": [
           "AUM 확보(T1 네이버)",
           "T0 공식 PDF API",
-          "구성종목 as_of 2026-11-03",
+          "구성종목 as_of 2026-11-04",
           "리밸일정 확보(T0 방법론 원문)",
           "비중합 검증 통과(±0.5%)",
           "종목수=10(지수명)",
@@ -4564,8 +4573,8 @@
       "underlying_index": "FnGuide 태양광&ESS 지수",
       "index_provider": "FnGuide",
       "constituent_count": 10,
-      "aum_krw_eok": 1751.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 1626.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -4676,6 +4685,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -4771,8 +4781,8 @@
       "underlying_index": "iSelect AI전력핵심설비 지수(PR)",
       "index_provider": "KIS(iSelect)",
       "constituent_count": 12,
-      "aum_krw_eok": 24095.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 22880.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 2회 (6월·12월)",
         "months": [
@@ -4889,6 +4899,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(123일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(124일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(13일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(14일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
@@ -4989,8 +5000,8 @@
       "underlying_index": "KRX-Akros AI 전력인프라 지수",
       "index_provider": "KRX-Akros",
       "constituent_count": 15,
-      "aum_krw_eok": 5045.0,
-      "aum_asof": "2026-11-03",
+      "aum_krw_eok": 4742.0,
+      "aum_asof": "2026-11-04",
       "rebalance": {
         "frequency_label": "연 4회 (3·6·9·12월)",
         "months": [
@@ -5131,6 +5142,7 @@
           "구성종목 stale(11일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(120일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(121일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
+          "구성종목 stale(122일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(12일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(15일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
           "구성종목 stale(16일) — 전량 재수집 필요(KODEX/ACE는 로컬 브라우저)",
